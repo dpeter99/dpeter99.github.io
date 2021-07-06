@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "wp --config webpack/base.config.js",
+    "dev": "wp --config webpack/dev.config.js",
     "build": "wp --config webpack/base.config.js",
     "start": "npm run build"
   },
