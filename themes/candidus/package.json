@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "wp --config webpack/base.config.js",
-    "build": "wp --config webpack/prod.config.js",
+    "build": "wp --config webpack/base.config.js",
     "start": "npm run build"
   },
   "author": "",
