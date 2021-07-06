@@ -1,0 +1,17 @@
+@use "./flex.scss";
+@use "./card.scss";
+
+.navbar{
+
+    color: black;
+
+    &-nav{
+        @include flex.flex(row);
+
+        gap: 12px;
+
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+}

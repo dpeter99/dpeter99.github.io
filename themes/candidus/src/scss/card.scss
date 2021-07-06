@@ -1,0 +1,40 @@
+@use "@material/elevation" as elevation;
+@use "@material/shape";
+
+@use "./flex.scss";
+
+.card{
+    @include shape.radius(6px, true);
+
+    @include elevation.elevation(8);
+
+    @include flex.flex(column);
+
+    background-color: white;
+
+    padding-bottom: 24px;
+
+    padding: 12px;
+
+    &__title{
+        /*margin-left: 12px;*/
+    }
+
+    &--big{
+        @include shape.radius(12px, true);
+
+        @include elevation.elevation(12);
+    }
+
+    &--800{
+        width: 800px;
+    }
+
+    &--outline{
+        @include elevation.elevation(0);
+
+        border-style: solid;
+        border-width: 1px;
+
+    }
+}
