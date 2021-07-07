@@ -1,7 +1,7 @@
 ---
 title: "Personal website"
 date: 2021-07-07T13:10:53+02:00
-draft: true
+draft: false
 ---
 
 As in this website. 😀
