@@ -1,7 +1,7 @@
 @use "@material/elevation" as elevation;
 @use "@material/shape";
 
-@use "./flex.scss";
+@use "./mixins/_flex";
 
 .card{
     @include shape.radius(6px, true);

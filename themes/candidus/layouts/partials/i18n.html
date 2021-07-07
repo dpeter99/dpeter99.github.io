@@ -1,8 +1,8 @@
 {{ if .IsTranslated }}
-<ul>
-    {{ range .Translations }}
+<ul class="navbar-nav--end i18n_picker">
+    {{ range .AllTranslations }}
     <li>
-        <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}{{ if .IsPage }} ({{ i18n "wordCount" . }}){{ end }}</a>
+        <a href="{{ .Permalink }}">{{ .Lang }}</a>
     </li>
     {{ end }}
 </ul>

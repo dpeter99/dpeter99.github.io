@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mdi/font": "^5.9.55",
     "autoprefixer": "^10.2.6",
     "css-loader": "^5.2.6",
     "material-components-web": "^11.0.0",

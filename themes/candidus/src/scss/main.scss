@@ -1,17 +1,21 @@
 @use "@material/elevation" as elevation;
 @use "@material/shape";
 
-@use "./mixins/breakpoints" as breaks;
+@use "mixins";
 
-@use "./flex.scss";
-@use "./card.scss";
+@use "./helpers/reset";
+@use "./_colors" as colors;
 
-@use "./menu.scss";
-@use "./reset.scss";
-@use "./background.scss";
+
+@use "./card";
+@use "./navbar";
+@use "./background";
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
+:root{
+    font-size: 16px;
+}
 
 main{
 
@@ -44,7 +48,7 @@ main{
 }
 
 .title{
-    @include flex.flex();
+    @include mixins.flex();
     
     align-items: baseline;
 
@@ -113,7 +117,7 @@ h2{
     display: grid;
     grid-template-columns: repeat(1, minmax(240px, 1fr));
     gap: 18px;
-    @include breaks.media-breakpoint-up(lg) { 
+    @include mixins.media-breakpoint-up(lg) { 
         grid-template-columns: repeat(2, minmax(240px, 1fr));
     }
 
@@ -125,7 +129,7 @@ article{
     }
 }
 
-@include breaks.media-breakpoint-down(md) { 
+@include mixins.media-breakpoint-down(md) { 
     .content{
         margin-left: 0;
         margin-right: 0;

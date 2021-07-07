@@ -1,25 +1,26 @@
 <nav class="navbar card">
     
     <ul class="navbar-nav">
-        <li>
-            <a href="/">
-                <div>
-                    <p>Home</p>
-                </div>
+        <li class="nav-item">
+            <a href="/" class="nav-item__link">
+                    
+                    {{ "static/img/account-circle-outline.svg"  | readFile | safeHTML }}
+                    
+                    <!--<p>Home</p>-->
             </a>
         </li>
-        <li>
-            <a href="/projects">
-                <div>
+        <li class="nav-item">
+            <a href="/projects" class="nav-item__link">
+                
                     <p>Projects</p>
-                </div>
+                
             </a>
         </li>
-        <li>
-            <a href="">
-                <div>
+        <li class="nav-item">
+            <a href="" class="nav-item__link">
+                
                     <p>Posts</p>
-                </div>
+                
             </a>
         </li>
 
