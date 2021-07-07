@@ -115,12 +115,6 @@ h2{
 }
 
 .projects{
-    display: grid;
-    grid-template-columns: repeat(1, minmax(240px, 1fr));
-    gap: 18px;
-    @include mixins.media-breakpoint-up(lg) { 
-        grid-template-columns: repeat(2, minmax(240px, 1fr));
-    }
 
 }
 

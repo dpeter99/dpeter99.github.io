@@ -45,7 +45,7 @@
 
       <h3>Highlited projects</h3>
 
-      <ul class="cards projects">
+      <ul class="cards-list">
         {{ $t := .Site.GetPage "/projects" }}
         {{ range $t.Data.Pages }}
             {{ if .Param "highlited" }}
