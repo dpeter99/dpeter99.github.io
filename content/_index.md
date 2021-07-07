@@ -1,1 +1,1 @@
-I'm a 21 year old guy studing Computer Scinece at the university. My main interests are Game and Game engine programming but I try to expand my knowledge in every field of computing.
+I'm a 21 year old guy studing Computer Scinece at the university. My main interests are Game and engine programming but I try to expand my knowledge in every field of computing. 

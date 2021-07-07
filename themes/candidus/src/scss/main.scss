@@ -114,13 +114,11 @@ h2{
     
 }
 
-.projects{
-
-}
 
 article{
     ul{
         list-style-type: disc;
+        padding-inline-start: 40px;
     }
 }
 
@@ -138,4 +136,10 @@ article{
             margin: 0;
         }
     }
+}
+
+
+p>a{
+    text-decoration: underline;
+    color: colors.$accent-color;
 }
