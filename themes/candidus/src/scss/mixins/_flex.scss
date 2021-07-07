@@ -22,6 +22,7 @@
 	} @else if $align == center { align-items: center
 	} @else if $align == start { align-items: flex-start
 	} @else if $align == end { align-items: flex-end
+	} @else if $align == baseline { align-items: baseline
 	} @else if $align == between { align-content: space-between
 	} @else if $align == around { align-content: space-around
 	} @else if $align == evenly { align-content: space-evenly }

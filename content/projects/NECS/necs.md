@@ -1,10 +1,12 @@
 ---
 title: "Necs"
 date: 2021-07-07T21:04:16+02:00
-draft: true
+draft: false
+description: "Not an Entity Component System. A small project for learning about Unity's Burst compiler and editor scripting"
+state: "active"
 ---
 
-### **N**ot a **E**ntity **C**omponent **S**ystem
+### **N**ot an **E**ntity **C**omponent **S**ystem
 This is a small project where I try to make a ECS for Unity that supports in editor authoring of the data. What this provides compared to Unity's ECS is taht you are not forced to use the complicated and confusing conversion system.
 
 ### What this is not

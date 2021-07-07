@@ -147,3 +147,20 @@ p>a{
 article h2{
     margin-top: 12px;
 }
+
+
+.project-title{
+    @include mixins.flex($align:baseline);
+
+    .icons{
+        margin-left: 12px;
+
+        .iconify{
+            $icon-height: 25px;
+
+            height: $icon-height;
+            width: $icon-height;
+        }
+    }
+
+}

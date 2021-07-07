@@ -1,8 +1,12 @@
 ---
-title: "Almoast Comprehensive Forge Tutorial"
+title: "ACFT"
 date: 2021-07-07T21:55:51+02:00
-draft: true
+draft: false
+description: "Almost Comprehensive Forge Tutorial. was abandoned in favour of the Community Wiki"
+state: "abandoned"
 ---
+
+
 
 **This project is discontinued**
 
