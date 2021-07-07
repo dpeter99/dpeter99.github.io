@@ -2,6 +2,7 @@
 title: "Personal website"
 date: 2021-07-07T13:10:53+02:00
 draft: false
+highlited: true
 ---
 
 As in this website. 😀

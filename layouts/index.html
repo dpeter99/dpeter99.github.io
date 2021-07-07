@@ -44,12 +44,32 @@
       </span>
 
       <h3>Highlited projects</h3>
+
+      <ul class="cards projects">
+        {{ $t := .Site.GetPage "/projects" }}
+        {{ range $t.Data.Pages }}
+            {{ if .Param "highlited" }}
+            <li>
+              <a href="{{.Permalink}}">
+                <div class="card card--outline">
+                  <h2 class="card__title">{{ .Title }}</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi eos ipsam magnam debitis expedita tempora facilis quos esse illo. Cupiditate consequuntur error voluptatem eum, autem nobis asperiores eos. Natus!</p>
+                </div>
+              </a>
+              
+            </li>
+            {{end}}
+
+        {{ end }}
+      </ul>
+
+<!--
       <div class="cards projects">
         <a href="/projects/shadowengine">
-        <div class="card card--outline">
-          <h2 class="card__title">Shadow Engine</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi eos ipsam magnam debitis expedita tempora facilis quos esse illo. Cupiditate consequuntur error voluptatem eum, autem nobis asperiores eos. Natus!</p>
-        </div>
+          <div class="card card--outline">
+            <h2 class="card__title">Shadow Engine</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi eos ipsam magnam debitis expedita tempora facilis quos esse illo. Cupiditate consequuntur error voluptatem eum, autem nobis asperiores eos. Natus!</p>
+          </div>
         </a>
         <div class="card card--outline">
           <h2 class="card__title">Arcane Rituals</h2>
@@ -70,7 +90,7 @@
       </div>
     </div>
 
-    
+  -->
 
   </div>
 </main>
