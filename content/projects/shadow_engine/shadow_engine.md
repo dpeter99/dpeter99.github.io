@@ -2,6 +2,7 @@
 title: "Shadow Engine"
 date: 2021-07-06T18:06:26+02:00
 draft: false
+description: "My hobby game engine using SDL2 and DX12."
 status: "dev"
 highlighted: true
 ---

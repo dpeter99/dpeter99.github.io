@@ -3,6 +3,8 @@ title: "Personal website"
 date: 2021-07-07T13:10:53+02:00
 draft: false
 highlighted: true
+description: "The website you are on right now. It lists most of my current and old projects, and in the future some posts as well."
+state: "active"
 ---
 
 As in this website. 😀
