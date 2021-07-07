@@ -43,21 +43,13 @@
         {{ .Content }}
       </span>
 
-      <h3>Highlited projects</h3>
+      <h3>Highlighted projects</h3>
 
       <ul class="cards-list">
         {{ $t := .Site.GetPage "/projects" }}
         {{ range $t.Data.Pages }}
-            {{ if .Param "highlited" }}
-            <li>
-              <a href="{{.Permalink}}">
-                <div class="card card--outline">
-                  <h2 class="card__title">{{ .Title }}</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi eos ipsam magnam debitis expedita tempora facilis quos esse illo. Cupiditate consequuntur error voluptatem eum, autem nobis asperiores eos. Natus!</p>
-                </div>
-              </a>
-              
-            </li>
+            {{ if .Param "highlighted" }}
+              {{ partial "project.html" . }}
             {{end}}
 
         {{ end }}
