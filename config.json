@@ -12,5 +12,6 @@
 		}
 	},
 	"title": "dpeter99",
-	"theme": "candidus"
+	"theme": "candidus",
+	"pygmentsUseClasses":true
 }
