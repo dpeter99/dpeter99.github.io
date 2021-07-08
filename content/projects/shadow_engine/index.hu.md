@@ -1,9 +1,10 @@
 ---
-title: "Shadow Engine"
-date: 2021-07-06T18:06:26+02:00
+title: Shadow Engine
+date: 2021-07-06T16:06:26.000Z
 draft: false
-status: "dev"
+status: dev
 highlighted: true
+description: A Shadow engine a hobbi játék-motorom ami sok ihhletet merít a Unity és UE4 felépítéséből. SDL2-őt és DX12-őt használok a kirajzoláshoz.
 ---
 ASD
 Shadow Engine is my hobby game engine i have been working on for for quite a while now.
