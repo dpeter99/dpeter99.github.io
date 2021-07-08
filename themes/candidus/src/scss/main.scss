@@ -148,6 +148,16 @@ article h2{
     margin-top: 12px;
 }
 
+article img{
+    margin-bottom: 12px;
+    margin-top: 12px;
+    width: 50%;
+}
+
+article p{
+    margin-bottom: 12px;
+}
+
 
 .project-title{
     @include mixins.flex($align:baseline);
