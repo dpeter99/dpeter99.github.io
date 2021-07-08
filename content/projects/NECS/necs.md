@@ -18,4 +18,4 @@ This is a small project where I try to make a ECS for Unity that supports in edi
  - This is for learning
 
 ## Current state
-Currently there is a Entity / Component allocator that seams to work. This code was ported form [ShadowEngine]({{< ref "/projects/shadow_engine/shadow_engine.md" >}} "Shadow Engine")
+Currently there is a Entity / Component allocator that seams to work. This code was ported form [ShadowEngine]({{< ref "/projects/shadow_engine" >}} "Shadow Engine")
