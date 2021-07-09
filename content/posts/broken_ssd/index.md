@@ -1,7 +1,7 @@
 ---
-title: "Broken SSD"
-date: 2021-07-08T11:00:59+02:00
-draft: true
+title: Broken SSD
+date: 2021-07-08T09:00:59.000Z
+draft: false
 ---
 
 Soo on 07.04 my SSD broke down. But it wasn't an easy case of windows telling me that it went bad and I just got a new one.
