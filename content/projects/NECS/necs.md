@@ -7,7 +7,7 @@ state: "active"
 ---
 
 ### **N**ot an **E**ntity **C**omponent **S**ystem
-This is a small project where I try to make a ECS for Unity that supports in editor authoring of the data. What this provides compared to Unity's ECS is taht you are not forced to use the complicated and confusing conversion system.
+This is a small project where I try to make a ECS for Unity that supports in editor authoring of the data. What this provides compared to Unity's ECS is that you are not forced to use the complicated and confusing conversion system.
 
 ### What this is not
  - This is not a Production ready project not do I plan on making it so
@@ -18,4 +18,4 @@ This is a small project where I try to make a ECS for Unity that supports in edi
  - This is for learning
 
 ## Current state
-Currently there is a Entity / Component allocator that seams to work. This code was ported form [ShadowEngine]({{< ref "/projects/shadow_engine" >}} "Shadow Engine")
+Currently there is a Entity / Component allocator that seems to work. This code was ported form [ShadowEngine]({{< ref "/projects/shadow_engine" >}} "Shadow Engine")
