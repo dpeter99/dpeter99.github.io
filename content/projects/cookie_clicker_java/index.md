@@ -5,6 +5,7 @@ draft: false
 description: This is a clone of the popular Cookie Clicker game, made in Java for a Uni Homework assignment
 state: "finished"
 tags: ["Uni"]
+repo: https://github.com/dpeter99/cookieclicker
 ---
 
 This colone of the poppular idle game Cookie clicker was make in less than 3 days for a University assignment. It uses a modular structure and should be faery easy to implement the rest of the game. 

@@ -1,17 +1,9 @@
 {{ define "main" }}
 <main class="article">
     <article class="card">
-        <div>
-            <div class="title">
-                <h2>{{ .Title }}</h2>
-                <h4 class="title__sub">{{ .Params.status }}</h4>
-              </div>
-            <div>
-                <h2></h2>
-            </div>
-        </div>
-        <div>
-            {{ .Content }}
+        {{ partial "project_title" . }}
+        
+        {{ .Content }}
         </div>
     </article>
 </main>

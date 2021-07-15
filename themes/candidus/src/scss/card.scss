@@ -16,6 +16,8 @@
 
     padding: 12px;
 
+    position: relative;
+
     &__title{
         /*margin-left: 12px;*/
     }
@@ -36,6 +38,15 @@
         border-style: solid;
         border-width: 1px;
 
+    }
+
+    &__link{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
     }
 }
 

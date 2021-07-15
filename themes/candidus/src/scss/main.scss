@@ -162,7 +162,7 @@ article p{
 .project-title{
     @include mixins.flex($align:baseline);
 
-    .icons{
+    .icons, .project_links{
         margin-left: 12px;
 
         .iconify{
