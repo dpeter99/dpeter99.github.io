@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "hugo server --buildDrafts"
+    "dev": "hugo server --buildDrafts",
+    "build": "deno run --allow-read --unstable --allow-write --allow-run --allow-net ./archivist.config.ts"
   },
   "author": "",
   "license": "ISC",

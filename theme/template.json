@@ -1,6 +1,10 @@
 {
   "$schema": "../../../src/template.schema.json",
   "compiledPath": "./dist",
+  "ignore":[
+    "layouts/**/*",
+    "*.ejs"
+  ],
   "matchers": [
     "${meta.type}.html.ejs"
   ]

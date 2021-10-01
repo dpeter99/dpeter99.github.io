@@ -1,22 +1,20 @@
 
-import * as archivist from "file://C:/Users/dpete/Documents/Programing/Archivist/src/index.ts";
-
-
+import * as archivist from "file://P:/_Projects/Archivist/archivist/src/index.ts";
 
 
 export const config: archivist.Config = {
     detailedOutput: false,
     template: "./theme",
-    outFolder: "./out",
+    outputPath: "./out",
     preProcessors: [
         archivist.Pipeline.fromModules({name:"build_template"},
             new archivist.WebpackModule(),
-            new archivist.StaticFilesModule()
+            new archivist.StaticTemplateFilesModule()
         )
     ],
     pipelines:[
-        archivist.Pipeline.fromModules({name:"blog_files",outputPath:"./"},
-            new archivist.FileReaderModule("content/**/*.md"),
+        archivist.Pipeline.fromModules({name:"blog_files",contentRoot:"./content/"},
+            new archivist.FileReaderModule("./**/*.md"),
             new archivist.ExtractMetadata(
                 new archivist.FrontMatterMetadata()
             ),
@@ -29,9 +27,9 @@ export const config: archivist.Config = {
             new archivist.MarkdownRender({
                 shiftHeadersAmount:0
             }),
+            new archivist.ExtractResources(),
             new archivist.TemplateModule(),
-            new archivist.OutputModule("./out/"),
-            new archivist.StaticFilesModule()
+            new archivist.OutputModule()
         )
     ]
 }

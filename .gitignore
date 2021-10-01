@@ -4,3 +4,7 @@ node_modules/
 
 themes/candidus/assets/app.css
 themes/candidus/assets/app.js
+
+out/
+
+theme/dist/
