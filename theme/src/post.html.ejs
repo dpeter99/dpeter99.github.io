@@ -1,31 +1,20 @@
-<!DOCTYPE html>
-<html>
-
-<%- include('layouts/head.html.ejs')%>
-
-    <body class="background-3">
-        <div class="content">
-            <%- include('layouts/nav.html.ejs')%>
-                <main class="article">
-                    <article class="card">
-                        <div>
-                            <div class="title">
-                                <h2>
-                                    <%= meta.title%>
-                                </h2>
-                                <h4 class="title__sub">
-                                    <%= meta.status%>
-                                </h4>
-                            </div>
-                            <div>
-                                <h2></h2>
-                            </div>
-                        </div>
-                        <div>
-                            <%- content %>
-                        </div>
-                    </article>
-                </main>
+<main class="article">
+    <article class="card">
+        <div>
+            <div class="title">
+                <h2>
+                    <%= meta.title%>
+                </h2>
+                <h4 class="title__sub">
+                    <%= meta.status%>
+                </h4>
+            </div>
+            <div>
+                <h2></h2>
+            </div>
         </div>
-    </body>
-</html>
+        <div>
+            <%- content %>
+        </div>
+    </article>
+</main>

@@ -7,9 +7,10 @@ export const config: archivist.Config = {
     template: "./theme",
     outputPath: "./out",
     preProcessors: [
-        archivist.Pipeline.fromModules({name:"build_template"},
+        archivist.Pipeline.fromModules({name:"build_template", contentRoot:"./content/"},
             new archivist.WebpackModule(),
-            new archivist.StaticTemplateFilesModule()
+            new archivist.StaticTemplateFilesModule(),
+            new archivist.CopyModule({source:"./content/static"})
         )
     ],
     pipelines:[
@@ -19,8 +20,8 @@ export const config: archivist.Config = {
                 new archivist.FrontMatterMetadata()
             ),
             new archivist.FunctionModule((doc => {
-                if(!doc.metadata.hasData("Type")){
-                    doc.metadata.addData("Type","post");
+                if(!doc.metadata.hasData("type")){
+                    doc.metadata.addData("type","post");
                 }
                 return Promise.resolve();
             })),

@@ -5,6 +5,7 @@
     "layouts/**/*",
     "*.ejs"
   ],
+  "rootTemplate":"root.ejs",
   "matchers": [
     "${meta.type}.html.ejs"
   ]
