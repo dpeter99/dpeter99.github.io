@@ -43,7 +43,16 @@ const config = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ['lit-scss-loader','extract-loader', "css-loader", "postcss-loader", "sass-loader"],
+        oneOf:[
+          {
+            resourceQuery: "?lit",
+            use: ['lit-scss-loader','extract-loader', "css-loader", "postcss-loader", "sass-loader"],
+          },
+          {
+            use: [stylesHandler, "css-loader", "postcss-loader", "sass-loader"],
+          }
+        ]
+        
       },
       {
         test: /\.css$/i,

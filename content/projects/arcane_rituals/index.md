@@ -3,7 +3,9 @@ title: Arcane Rituals
 date: 2021-07-07T20:16:46.000Z
 draft: false
 description: Arcane Rituals is a in development Minecraft mod that is based on magic and inspired by D&D
-state: active
+state: 
+    - active
+    - on-hold
 highlighted: true
 repo: "https://github.com/dpeter99/ArcaneRituals"
 ---

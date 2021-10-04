@@ -3,7 +3,7 @@ import {customElement} from 'lit/decorators.js';
 
 import './project-title'
 
-import style1 from './project-card.scss';
+import style1 from './project-card.scss?lit';
 
 console.log(style1);
 
@@ -14,10 +14,6 @@ export class ProjectCard extends LitElement {
     return html`
       <div class="card card--outline">
         <a class="card__link" href="{{.Permalink}}"></a>
-
-        <!--{{ partial "project_title" . }}-->
-        <%-include("project_title.html.ejs")%>
-        
         <slot></slot>
 
         <p> <%= meta.description %> <!--{{.Description}}--></p>

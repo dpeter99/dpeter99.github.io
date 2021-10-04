@@ -1,9 +1,38 @@
 import {LitElement, html} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 
-import style1 from './project-card.scss';
+import '/src/components/util/icon-row.ts';
+import "../components/util/ic-icon";
+
+import style1 from './project-card.scss?lit';
 
 console.log(style1);
+
+import wrench from "@iconify/icons-mdi/wrench";
+import pauseCircle from "@iconify/icons-mdi/pause-circle";
+import snowflake from "@iconify/icons-mdi/snowflake";
+import skullOutline from "@iconify/icons-mdi/skull-outline";
+import checkDecagram from "@iconify/icons-mdi/check-decagram";
+import { IconifyIcon } from '../components/util/ic-icon';
+const icons = {
+  "mdi:wrench":wrench,
+  "mdi:pause-circle":pauseCircle,
+  "mdi:snowflake":snowflake,
+  "mdi:skull-outline":skullOutline,
+  "mdi:check-decagram":checkDecagram,
+};
+
+function statusToIcons(status:string):object{
+    switch (status) {
+      case "active": return icons['mdi:wrench'];
+      case "on-hold": return icons['mdi:pause-circle'];
+      case "deep-freezed": return icons['mdi:snowflake'];
+      case "abandoned": return icons['mdi:skull-outline'];
+      case "finished": return icons['mdi:check-decagram'];
+      default:
+        break;
+    }
+}
 
 @customElement('project-title')
 export class ProjectTitle extends LitElement {
@@ -11,8 +40,13 @@ export class ProjectTitle extends LitElement {
     @property()
     title: string;
 
+    @property({type:Array})
+    status: string[];
+
 
   render() {
+
+    console.log(this.status);
     return html`
     <div class="project-title">
         <h2 class="card__title">
@@ -20,27 +54,7 @@ export class ProjectTitle extends LitElement {
         </h2>
 
         <div class="icons">
-            {{ $type := .Param "state" }}
-
-            {{ with or (eq $type "active") (in $type "active") }}
-            <span class="iconify" data-icon="mdi:wrench"></span>
-            {{ end }}
-            {{ with or (eq $type "on-hold") (in $type "on-hold")}}
-            <span class="iconify" data-icon="mdi:pause-circle"></span>
-            {{ end }}
-            {{ with or (eq $type "deep-freezed") (in $type "deep-freezed") }}
-            <span class="iconify" data-icon="mdi:snowflake"></span>
-            {{ end }}
-            {{ with or (eq $type "abandoned") (in $type "abandoned") }}
-            <span class="iconify" data-icon="mdi:skull-outline"></span>
-            {{ end }}
-            {{ with or (eq $type "finished") (in $type "finished") }}
-            <span class="iconify" data-icon="mdi:check-decagram"></span>
-            {{ end }}
-            {{ with (eq $type "not-active") }}
-            ...
-            {{ end }}
-
+            <icon-row .icons=${this.status.map(statusToIcons)}></icon-row>
         </div>
 
         {{ $repo := .Param "repo" }}

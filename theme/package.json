@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@iconify/icons-mdi": "^1.1.32",
     "@mdi/font": "^5.9.55",
     "lit": "^2.0.0",
     "material-components-web": "^13.0.0"

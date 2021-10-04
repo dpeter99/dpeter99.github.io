@@ -3,14 +3,13 @@
         <header>
             <h1><%= meta.title %></h1>
         </header>
-        <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
         <%- content %>
 
         <ul class="cards-list">
             <% pipeline.files.filter((d)=>ArticleHelper.subArticle(d)).forEach(doc => {%>
-                
+                <%= doc.meta.state %>
                 <project-card>
-                    <project-title title="<%= doc.meta.title %>"></project-title>
+                    <project-title title="<%= doc.meta.title %>" status="<%= JSON.stringify(doc.meta.state) %>"></project-title>
                 </project-card>
                 
             <% }) %>

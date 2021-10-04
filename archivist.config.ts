@@ -1,5 +1,5 @@
 
-import * as archivist from "file://P:/_Projects/Archivist/archivist/src/index.ts";
+import * as archivist from "https://github.com/dpeter99/archivist/raw/main/src/index.ts";
 
 
 export const config: archivist.Config = {
