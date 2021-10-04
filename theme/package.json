@@ -1,32 +1,41 @@
 {
-  "name": "candidus",
+  "name": "my-webpack-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "My webpack project",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --config dev.config.js",
-    "build": "webpack --config base.config.js",
-    "start": "npm run build"
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@mdi/font": "^5.9.55",
-    "autoprefixer": "^10.2.6",
-    "lit-element": "^3.0.0",
-    "lit-html": "^2.0.0",
+    "lit": "^2.0.0",
     "material-components-web": "^13.0.0"
   },
   "devDependencies": {
+    "@webpack-cli/generators": "^2.3.0",
+    "autoprefixer": "^10.3.6",
     "copy-webpack-plugin": "^9.0.1",
-    "css-loader": "^5.2.6",
-    "mini-css-extract-plugin": "^2.1.0",
+    "css-loader": "^5.2.7",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "postcss": "^8.3.8",
     "postcss-loader": "^6.1.1",
-    "sass": "^1.35.1",
+    "prettier": "^2.4.1",
+    "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
-    "webpack": "^5.42.1",
-    "webpack-cli": "^4.7.2",
+    "style-loader": "^3.2.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.3",
+    "webpack": "^5.56.1",
+    "webpack-cli": "^4.8.0",
     "webpack-merge": "^5.8.0",
-    "webpack-nano": "^1.1.1"
+    "webpack-nano": "^1.1.1",
+    "workbox-webpack-plugin": "^6.3.0"
   }
 }
