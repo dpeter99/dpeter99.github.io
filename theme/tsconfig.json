@@ -3,10 +3,14 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "module": "es6",
-    "target": "es5",
+    "target": "ESNext",
     "allowJs": true,
     "experimentalDecorators":true,
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    "useDefineForClassFields":false
   },
-  "files": ["src/index.ts"]
+  "files": ["src/index.ts"],
+  "include": [
+    "node_modules/lit-scss-loader/types.d.ts"
+  ]
 }

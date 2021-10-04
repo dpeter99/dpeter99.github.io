@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
 
-<%- include('layouts/head.html.ejs')%>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<link rel="stylesheet" href="style/main.css">-->
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <link href="<%= pipeline.outputPath %>/main.css" rel="stylesheet">
+
+    <script src="<%= pipeline.outputPath %>/main.js"></script>
+</head>
 
 <body class="background-3">
 
-<div class="content">
-    <%- include('layouts/nav.html.ejs')%>
+    <div class="content">
+        <%- include('layouts/nav.html.ejs')%>
 
-        <%-include(template)%>
+            <%-include(template)%>
 
-</div>
-<%- include("layouts/footer.html.ejs") %>
+    </div>
+    <%- include("layouts/footer.html.ejs") %>
 </body>
-</html>
 
+</html>

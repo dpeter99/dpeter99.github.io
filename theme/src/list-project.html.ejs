@@ -9,7 +9,9 @@
         <ul class="cards-list">
             <% pipeline.files.filter((d)=>ArticleHelper.subArticle(d)).forEach(doc => {%>
                 
-                    <%-include("layouts/project.html.ejs", doc); %>
+                <project-card>
+                    <project-title title="<%= doc.meta.title %>"></project-title>
+                </project-card>
                 
             <% }) %>
         </ul>

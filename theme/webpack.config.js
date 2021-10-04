@@ -4,6 +4,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -15,9 +16,17 @@ const config = {
     path: path.resolve(__dirname, "dist"),
   },
   plugins: [
+    /*
     new HtmlWebpackPlugin({
       template: "src/root.ejs",
       
+    }),
+    */
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: './**/*.ejs', context: "./src"},
+        { from: './**/*.html', context: "./src"}
+      ]
     }),
 
     new MiniCssExtractPlugin(),
@@ -34,7 +43,7 @@ const config = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [stylesHandler, "css-loader", "postcss-loader", "sass-loader"],
+        use: ['lit-scss-loader','extract-loader', "css-loader", "postcss-loader", "sass-loader"],
       },
       {
         test: /\.css$/i,
@@ -61,8 +70,8 @@ module.exports = () => {
     config.plugins.push(new WorkboxWebpackPlugin.GenerateSW());
   } else {
     config.mode = "development";
-    config.devtool = "eval-source-map";
-    config.watch = true
+    config.devtool = "source-map";
+    //config.watch = true
   }
   return config;
 };
