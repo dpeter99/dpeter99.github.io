@@ -1,3 +1,3 @@
 ---
-type: list
+type: list-project
 ---

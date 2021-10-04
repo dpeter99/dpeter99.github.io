@@ -1,0 +1,19 @@
+<main>
+    <div>
+        <header>
+            <h1><%= meta.title %></h1>
+        </header>
+        <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
+        <%- content %>
+
+        <ul class="cards-list">
+            <% pipeline.files.filter((d)=>ArticleHelper.subArticle(d)).forEach(doc => {%>
+                
+                    <%-include("layouts/project.html.ejs", doc); %>
+                
+            <% }) %>
+        </ul>
+    </div>
+
+
+</main>
