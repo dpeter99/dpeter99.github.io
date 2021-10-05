@@ -19,10 +19,14 @@
 }
 
 main{
+    @include flex(collumn);
+
 
     margin-top: 24px;
 
     display: flex;
+
+
     justify-content: center;
 
     &>*{

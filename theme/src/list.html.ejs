@@ -6,14 +6,15 @@
         <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
         <%- content %>
     </article>
-    <ul>
-        <!-- Ranges through content/posts/*.md -->
-        {{ range .Pages }}
+    <div class="card">
+        <ul>
+            <!-- Ranges through content/posts/*.md --> 
 
-        <% pipeline.files.filter((d)=>ArticleHelper.subArticle(d)).forEach(doc => {%>
-        <li>
-            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | <%=doc.meta.title%></a>
-        </li>
-        <% }) %>
-    </ul>
+            <% pipeline.files.filter((d)=>ArticleHelper.subArticle(d)).forEach(doc => {%>
+            <li>
+                <a href="<%= ArticleHelper.getLink(doc) %>">{{.Date.Format "2006-01-02"}} | <%=doc.meta.title%></a>
+            </li>
+            <% }) %>
+        </ul>
+    </div>
 </main>
