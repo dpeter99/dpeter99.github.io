@@ -10,7 +10,6 @@ export class IconRow extends LitElement {
   render() {
     return html`
     <ul>
-        ${this.icons.length}
         ${this.icons.map(i=>
             html`
             <ic-icon .icon=${i}></span>
@@ -24,7 +23,11 @@ export class IconRow extends LitElement {
 		return css`
         ul{
             display:flex;
-            
+            margin:0;
+            padding:0;
+        }
+        :host{
+          display:block;
         }
         `;
   }

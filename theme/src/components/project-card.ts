@@ -1,5 +1,5 @@
 import {LitElement, html} from 'lit';
-import {customElement} from 'lit/decorators.js';
+import {customElement, property} from 'lit/decorators.js';
 
 import './project-title'
 
@@ -10,15 +10,15 @@ console.log(style1);
 @customElement('project-card')
 export class ProjectCard extends LitElement {
 
+  @property()
+  href:string
+
   render() {
     return html`
       <div class="card card--outline">
-        <a class="card__link" href="{{.Permalink}}"></a>
+        <a class="card__link" href="${this.href}"></a>
         <slot></slot>
-
-        <p> <%= meta.description %> <!--{{.Description}}--></p>
-
-        
+        <slot name="description"></slot>        
       </div>
     `;
   }

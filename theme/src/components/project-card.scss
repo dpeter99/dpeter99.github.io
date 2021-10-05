@@ -1,1 +1,6 @@
 @use "../scss/card.scss";
+@use "../scss/helpers/reset.scss";
+
+.card{
+    height: 100%;
+}

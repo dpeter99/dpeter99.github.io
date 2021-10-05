@@ -2,10 +2,8 @@ import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {unsafeSVG} from 'lit/directives/unsafe-svg.js';
 
-
-
 @customElement('ic-icon')
-export class IconifyIcon extends LitElement {
+export class IconifyIconComponent extends LitElement {
 
     @property({attribute:false})
     icon:IconifyIcon
@@ -35,6 +33,6 @@ export class IconifyIcon extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "ic-icon": IconifyIcon,
+    "ic-icon": IconifyIconComponent,
   }
 }
