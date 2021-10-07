@@ -23,9 +23,9 @@ jobs:
         with:
           node-version: '16'
       
-      - run: npm i
+      - run: npm ci
 
-      - run: npm i
+      - run: npm ci
         working-directory: ./theme     
 
       - run: pwd

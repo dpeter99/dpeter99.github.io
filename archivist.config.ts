@@ -1,7 +1,7 @@
 
 //import * as archivist from "./achivist_import.ts";
 
-import * as archivist from "https://raw.githubusercontent.com/dpeter99/archivist/fix/webpack_cmd/src/index.ts";
+import * as archivist from "https://raw.githubusercontent.com/dpeter99/archivist/fix/linux_builds/src/index.ts";
 
 
 export const config: archivist.Config = {
