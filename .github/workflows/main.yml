@@ -15,11 +15,9 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+      - uses: denoland/setup-deno@v1
         with:
-          hugo-version: 'latest'
-          # extended: true
+          deno-version: vx.x.x
 
       - uses: actions/setup-node@v2
         with:
@@ -28,17 +26,14 @@ jobs:
       - run: npm i
 
       - run: npm i
-        working-directory: ./themes/candidus
-
-      - run: npm run build
-        working-directory: ./themes/candidus        
+        working-directory: ./theme     
 
       - name: Build
-        run: hugo --minify
+        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./out
