@@ -1,0 +1,23 @@
+@use "~/src/scss/mixins";
+
+.project-title{
+    @include mixins.flex($align:baseline);
+
+    .icons, .project_links{
+        margin-left: 12px;
+
+        .iconify{
+            $icon-height: 25px;
+
+            height: $icon-height;
+            width: $icon-height;
+        }
+    }
+
+}
+
+h2{
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 35px;
+}

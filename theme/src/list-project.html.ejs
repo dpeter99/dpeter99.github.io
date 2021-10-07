@@ -1,0 +1,22 @@
+<main>
+    <div>
+        <header>
+            <h1><%= meta.title %></h1>
+        </header>
+        <%- content %>
+
+        <ul class="cards-list">
+            <% pipeline.files.filter((d)=>ArticleHelper.subArticle(d)).forEach(doc => {%>
+                <project-card href="<%= ArticleHelper.getLink(doc) %>">
+                    <project-title title="<%= doc.meta.title %>" status="<%= JSON.stringify(doc.meta.state) %>"></project-title>
+
+                    <p slot="description"> <%= doc.meta.description %></p>
+
+                </project-card>
+                
+            <% }) %>
+        </ul>
+    </div>
+
+
+</main>

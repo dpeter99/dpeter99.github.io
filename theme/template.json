@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../src/template.schema.json",
+  "compiledPath": "./dist",
+  "ignore":[
+    "layouts/**/*",
+    "*.ejs"
+  ],
+  "rootTemplate":"root.ejs",
+  "matchers": [
+    "${meta.type}.html.ejs"
+  ],
+  "metadata":{
+    "mustBeArray":[
+      "state"
+    ]
+  }
+}

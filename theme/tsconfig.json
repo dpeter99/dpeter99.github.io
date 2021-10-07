@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "ESNext",
+    "allowJs": true,
+    "experimentalDecorators":true,
+    "moduleResolution": "Node",
+    "useDefineForClassFields":false,
+    "baseUrl": "./src",
+  },
+  "files": ["src/index.ts"],
+  "include": [
+    "node_modules/lit-scss-loader/types.d.ts",
+    "src/types.d.ts"
+  ],
+  
+}
