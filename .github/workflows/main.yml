@@ -28,7 +28,7 @@ jobs:
       - run: npm i
         working-directory: ./theme     
 
-      - run: tree
+      - run: pwd
 
       - name: Build
         run: npm run build
