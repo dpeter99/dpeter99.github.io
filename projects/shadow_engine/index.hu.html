@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<link rel="stylesheet" href="style/main.css">-->
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <link href="/main.css" rel="stylesheet">
+
+    <script src="/main.js"></script>
+</head>
+
+<body class="background-3">
+
+    <div class="content">
+        <nav class="navbar card">
+
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a href="/" class="nav-item__link">
+                <img src="/static/img/account-circle-outline.svg" />
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/projects" class="nav-item__link">
+
+                <p>Projects</p>
+
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/posts" class="nav-item__link">
+
+                <p>Posts</p>
+
+            </a>
+        </li>
+
+        <!--{{- partial "i18n.html" . -}}-->
+    </ul>
+
+
+</nav>
+
+            <main class="article">
+    <article class="card">
+        <div>
+            <div class="title">
+                <h2>
+                    Shadow Engine
+                </h2>
+                <h4 class="title__sub">
+                    
+                </h4>
+            </div>
+            <div>
+                <h2></h2>
+            </div>
+        </div>
+        <div>
+            <p>A Shadow engine az én hobbi játék-motorom ami sok ihhletet merít a Unity és UE4 felépítéséből. SDL2-őt és DX12-őt használok a kirajzoláshoz. Már egy ideje dolgozom rajta a szabadidőmben ha van inspirációm.</p>
+<h3 class="heading" id="history" tabindex="-1"><a href="#history"></a>History</h3>
+<p>The engine started off as a cpp rewrite of my 2D game engine RelicEngine made in C, but this scope was quickly outgrown. Both engines were started for University Homeworks, as we usually get the option of miking something big as a proof that we understood the language. But as I started working on Shadow Engine the scope expanded quite fast. As a result I chose only the input system as the Homework assignment. But i did continue working on it after the CPP course ended. Next year I had a Dx12 optional course so that is why Shadow Engine uses Dx12 as the renderer. At the end of that semester I had a working but really simple renderer. And in the coming months I did start the rewrite of that to be more robust and use more features. This is where the code is now (2021.07).</p>
+<h3 class="heading" id="state-of-the-code" tabindex="-1"><a href="#state-of-the-code"></a>State of the code</h3>
+<p>There are two main branches in the SE repo.</p>
+<ul>
+<li><code>Main/master</code> contains a version that is actually runnable. This is using the old naive renderer that is quite slow and does not allow for many features.</li>
+<li><code>d3d12</code> The rewiring of the renderer this is currently not supposed to run. The renderer currently only has the back end allocation and resource management components.</li>
+</ul>
+
+        </div>
+    </article>
+</main>
+
+    </div>
+    
+</body>
+
+</html>

@@ -52,7 +52,7 @@
         <div>
             <div class="title">
                 <h2>
-                    Arcane Rituals
+                    Tile_map
                 </h2>
                 <h4 class="title__sub">
                     
@@ -63,10 +63,11 @@
             </div>
         </div>
         <div>
-            <p>Arcane Rituals is my Minecraft mod made using Forge.</p>
-<h2 class="heading" id="origins" tabindex="-1"><a href="#origins"></a>Origins</h2>
-<p>The origins of this mod and the basic idea for it is really old. I started it first as a vanilla data pack but i got upset with the lack of custom block models. So the first thing i tried to do was to somehow make blocks be able to get custom models. This was the original reason I started looking into how modding works. After a bit of a digging and learning how the internals of MC work I realized it was not possible to do in a sane way. So i bit the bullet and started on the slippery slope of MC modding.
-At first I started to work on it in 1.14 and moved to 1.15 with ease. But at this point I lost motivation so stated to work on other projects. But after getting upset in a private SMP server about how the anvil works I decided to pick up the mod again and get at least some form of magical anvil working.</p>
+            <p>TileMap's idea was started before Unity had an official Tile map integrated into the engine. That implementation came out while I was making this. And while i did work on it after that, the inspiration died out soon after. This was also one of the few larger projects that I worked on.</p>
+<h3 class="heading" id="how-it-works" tabindex="-1"><a href="#how-it-works"></a>How it works</h3>
+<p>The base idea of the system is to split the map into chunks. For each of these chunk than we construct a mesh that we can manually submit for unity to draw. This way the whole visible area can be drawn by only a few meshes. The system has a built in support for layers as opposed to Unity's solution that uses multiple Tile map objects for the same thing. It can also generate a collision mesh for the map.</p>
+<h3 class="heading" id="problems" tabindex="-1"><a href="#problems"></a>Problems</h3>
+<p>It uses a separate object for each tile witch is not memory efficient.</p>
 
         </div>
     </article>
