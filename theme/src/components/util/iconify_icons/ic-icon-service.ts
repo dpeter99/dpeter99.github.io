@@ -1,36 +1,32 @@
 
-
-
-
 export class IconifyIconService{
 
     private static instance: IconifyIconService;
 
-    icons: Map<string, {body:string}>;
+    icons: Map<string, {body:string}> = new Map();
 
     constructor(){
-        if(this.instance != undefined){
-            throw "Nultiple instances of singleton";
+        if(IconifyIconService.instance != undefined){
+            throw "Multiple instances of singleton";
         }
+        IconifyIconService.instance = this;
+        //window.globalThis["IconifyIconService"] = this;
     }
 
-    get instance(){
-        if(this.instance == undefined){
+    static get Instance(): IconifyIconService{
+        if(IconifyIconService.instance == undefined){
             new IconifyIconService();
         }
-        return this.instance;
+        return IconifyIconService.instance;
     }
 
 
     static addIcon(key:string,icon:{body:string}){
-        this.instance.icons.set(key,icon);
+        IconifyIconService.Instance.icons.set(key,icon);
     }
 
     static getIcon(key:string){
-        return this.instance.icons.get(key);
+        return IconifyIconService.Instance.icons.get(key);
     }
 
 }
-
-
-window.globalThis["IconifyIconService"] = new IconifyIconService();

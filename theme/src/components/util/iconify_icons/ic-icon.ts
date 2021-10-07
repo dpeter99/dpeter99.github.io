@@ -7,29 +7,30 @@ import { IconifyIconService } from './ic-icon-service';
 export class IconifyIconComponent extends LitElement {
 
     @property({ attribute: false })
-    icon: IconifyIcon
+    iconData: {body:string}
 
     @property()
     key: string
 
-    getSVG(){
-        if(key != null){
-            return html`
-                ${unsafeSVG(IconifyIconService.getIcon(this.key).body)}
+    render() {
+        if(this.key != undefined){
+            this.iconData = IconifyIconService.getIcon(this.key);
+        }
+        
+        let svg;
+
+        if(this.iconData?.body != undefined){
+            svg = html`
+                ${unsafeSVG(this.iconData.body)}
             `
         }
         else{
-            return html`
-                ${unsafeSVG(this.icon.body)}
-            `
+            svg = html``;
         }
-    }
 
-
-    render() {
         return html`   
         <svg>
-            ${this.getSVG()}
+            ${svg}
         </svg>
         `;
     }

@@ -1,19 +1,20 @@
 import { html } from 'lit';
-import { icons, statusToIcons } from './../../../icons';
+import './../../../icons';
 
 import './ic-icon';
+import { IconifyIconService } from './ic-icon-service';
 
 // This default export determines where your story goes in the story list
 export default {
-  title: 'YourComponent',
+  title: 'Components/IconifyIcon',
 };
 
 // 👇 We create a “template” of how args map to rendering
-const Template = ({ aProperty }) => html`<ic-icon .icon=${aProperty}></ic-icon>`;
+const Template = ({ icon }) => html`<ic-icon key=${icon}></ic-icon>`;
 
-export const FirstStory = Template.bind({});
+export const Single = Template.bind({});
 
-FirstStory.args = {
+Single.args = {
   /* 👇 The args you need here will depend on your component */
-  aProperty: icons['mdi:wrench']
+  icon: "mdi:wrench"
 };

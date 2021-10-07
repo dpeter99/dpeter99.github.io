@@ -2,7 +2,7 @@ import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
 import '/src/components/util/icon-row.ts';
-import "../components/util/ic-icon";
+import "../components/util/iconify_icons/ic-icon";
 
 import { statusToIcons } from "../icons";
 

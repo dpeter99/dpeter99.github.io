@@ -19,7 +19,7 @@
 }
 
 main{
-    @include flex(collumn);
+    @include mixins.flex(collumn);
 
 
     margin-top: 24px;

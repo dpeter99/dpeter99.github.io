@@ -9,3 +9,5 @@ themes/candidus/assets/app.js
 out/
 
 theme/dist/
+
+achivist_import.ts
