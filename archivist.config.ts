@@ -1,7 +1,7 @@
 
 //import * as archivist from "./achivist_import.ts";
 
-import * as archivist from "https://raw.githubusercontent.com/dpeter99/archivist/0.1.0-alpha01/src/index.ts";
+import * as archivist from "https://raw.githubusercontent.com/dpeter99/archivist/main/src/index.ts";
 
 
 export const config: archivist.Config = {
