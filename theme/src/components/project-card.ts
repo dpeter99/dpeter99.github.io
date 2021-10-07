@@ -5,8 +5,6 @@ import './project-title'
 
 import style1 from './project-card.scss?lit';
 
-console.log(style1);
-
 @customElement('project-card')
 export class ProjectCard extends LitElement {
 

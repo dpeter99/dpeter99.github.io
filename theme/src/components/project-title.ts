@@ -22,7 +22,6 @@ export class ProjectTitle extends LitElement {
 
   render() {
 
-    console.log(this.status);
     return html`
     <div class="project-title">
       <h2 class="card__title">

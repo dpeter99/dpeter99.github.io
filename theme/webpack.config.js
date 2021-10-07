@@ -16,12 +16,6 @@ const config = {
     path: path.resolve(__dirname, "dist"),
   },
   plugins: [
-    /*
-    new HtmlWebpackPlugin({
-      template: "src/root.ejs",
-      
-    }),
-    */
     new CopyWebpackPlugin({
       patterns: [
         { from: './**/*.ejs', context: "./src"},
