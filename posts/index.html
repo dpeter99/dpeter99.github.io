@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,7 @@
 
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a href="/" class="nav-item__link">
+            <a href="/" class="nav-item__link" >
                 <!--<img src="/static/img/account-circle-outline.svg" />-->
                 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
@@ -116,16 +116,36 @@
         
     </article>
     <div class="card">
-        <ul>
+        <ul class="article-list">
             <!-- Ranges through content/posts/*.md --> 
 
             
-            <li>
-                <a href="/posts/broken_ssd/index.html">{{.Date.Format "2006-01-02"}} | Broken SSD</a>
+            <li >
+                <a href="/posts/broken_ssd/index.html">
+                <div class="card card--outline">
+                    <h3>
+                        Broken SSD
+                    </h3>
+                    <p>
+                        
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum neque eaque sint mollitia beatae.
+                    </p>
+                </div>
+                </a>
             </li>
             
-            <li>
-                <a href="/posts/forge_117.html">{{.Date.Format "2006-01-02"}} | Forge 1.17 update</a>
+            <li >
+                <a href="/posts/forge_117.html">
+                <div class="card card--outline">
+                    <h3>
+                        Forge 1.17 update
+                    </h3>
+                    <p>
+                        
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum neque eaque sint mollitia beatae.
+                    </p>
+                </div>
+                </a>
             </li>
             
         </ul>
