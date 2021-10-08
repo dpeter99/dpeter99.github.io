@@ -10,11 +10,11 @@ export class IconifyIconComponent extends LitElement {
     iconData: {body:string}
 
     @property()
-    key: string
+    icon: string
 
     render() {
-        if(this.key != undefined){
-            this.iconData = IconifyIconService.getIcon(this.key);
+        if(this.icon != undefined){
+            this.iconData = IconifyIconService.getIcon(this.icon);
         }
         
         let svg;

@@ -10,7 +10,7 @@ export default {
 };
 
 // 👇 We create a “template” of how args map to rendering
-const Template = ({ icon }) => html`<ic-icon key=${icon}></ic-icon>`;
+const Template = ({ icon }) => html`<ic-icon icon=${icon}></ic-icon>`;
 
 export const Single = Template.bind({});
 

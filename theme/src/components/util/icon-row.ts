@@ -12,7 +12,7 @@ export class IconRow extends LitElement {
     <ul>
         ${this.icons.map(i=>
             html`
-            <ic-icon .icon=${i}></span>
+            <ic-icon icon=${i}></span>
             `
         )}            
     </ul>

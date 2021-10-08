@@ -16,12 +16,14 @@ const config = {
   entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, "dist"),
+    clean: true
   },
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
         { from: './**/*.ejs', context: "./src"},
-        { from: './**/*.html', context: "./src"}
+        //{ from: './**/*.html', context: "./src"},
+        { from: './layouts', context: "./src", to: "./layouts"}
       ]
     }),
     new MiniCssExtractPlugin(),
@@ -30,7 +32,7 @@ const config = {
     rules: [
       {
         test: /\.(ts|tsx)$/i,
-        use: ["source-map-loader","ts-loader"],
+        use: ["ts-loader"],
         exclude: ["/node_modules/"],
       },
       {

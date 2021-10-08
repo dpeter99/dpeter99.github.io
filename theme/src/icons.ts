@@ -19,13 +19,13 @@ IconifyIconService.addIcon("mdi:pause-circle", pauseCircle);
 IconifyIconService.addIcon("mdi:snowflake", snowflake);
 IconifyIconService.addIcon("mdi:skull-outline", skullOutline);
 
-export function statusToIcons(status: string): object {
+export function statusToIcons(status: string): string {
   switch (status) {
-    case "active": return icons['mdi:wrench'];
-    case "on-hold": return icons['mdi:pause-circle'];
-    case "deep-freezed": return icons['mdi:snowflake'];
-    case "abandoned": return icons['mdi:skull-outline'];
-    case "finished": return icons['mdi:check-decagram'];
+    case "active": return 'mdi:wrench';
+    case "on-hold": return 'mdi:pause-circle';
+    case "deep-freezed": return 'mdi:snowflake';
+    case "abandoned": return 'mdi:skull-outline';
+    case "finished": return 'mdi:check-decagram';
     default:
       break;
   }

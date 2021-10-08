@@ -4,9 +4,8 @@ import { customElement, property } from 'lit/decorators.js';
 import '/src/components/util/icon-row.ts';
 import "../components/util/iconify_icons/ic-icon";
 
-import { statusToIcons } from "../icons";
-
 import style1 from './project-title.scss?lit';
+import { statusToIcons } from '../icons';
 
 @customElement('project-title')
 export class ProjectTitle extends LitElement {

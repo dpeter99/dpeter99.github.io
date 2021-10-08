@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "hugo server --buildDrafts",
-    "build": "deno run --allow-read --unstable --allow-write --allow-run --allow-net ./archivist.config.ts"
+    "build": "deno run --allow-read --unstable --allow-write --allow-run --allow-net ./archivist.config.ts",
+    "build:prod": "deno run --allow-read --unstable --allow-write --allow-run --allow-net ./archivist.config.ts --env=prod"
   },
   "author": "",
   "license": "ISC",

@@ -1,13 +1,19 @@
 
-import * as archivist from "./achivist_import.ts";
+//import * as archivist from "./achivist_import.ts";
 
-//import * as archivist from "https://raw.githubusercontent.com/dpeter99/archivist/fix/webpack_cmd/src/index.ts";
+import * as archivist from "https://raw.githubusercontent.com/dpeter99/archivist/fix/webpack_cmd/src/index.ts";
 
+let env : "development" | "production" = "development"
+if(Deno.args.includes("--env=prod")){
+    env = "production"    
+}
+console.log(env);
 
 export const config: archivist.Config = {
     detailedOutput: false,
     template: "./theme",
     outputPath: "./out",
+    env: env,
     preProcessors: [
         archivist.Pipeline.fromModules({name:"build_template", contentRoot:"./content/"},
             new archivist.WebpackModule(),
