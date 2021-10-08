@@ -1,12 +1,14 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
+const isProduction = process.env.NODE_ENV == "production";
+
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
-const isProduction = process.env.NODE_ENV == "production";
 
 const stylesHandler = MiniCssExtractPlugin.loader;
 
@@ -22,17 +24,13 @@ const config = {
         { from: './**/*.html', context: "./src"}
       ]
     }),
-
     new MiniCssExtractPlugin(),
-
-    // Add your plugins here
-    // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
   module: {
     rules: [
       {
         test: /\.(ts|tsx)$/i,
-        loader: "ts-loader",
+        use: ["source-map-loader","ts-loader"],
         exclude: ["/node_modules/"],
       },
       {
@@ -61,16 +59,25 @@ const config = {
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
   },
+  optimization: {
+    minimizer: [
+      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+      `...`,
+      new CssMinimizerPlugin(),
+    ],
+  },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
 };
 
+console.log("is prod: " + isProduction);
+
 module.exports = () => {
   if (isProduction) {
     config.mode = "production";
-
-    config.plugins.push(new WorkboxWebpackPlugin.GenerateSW());
+    
+    //config.plugins.push(new WorkboxWebpackPlugin.GenerateSW());
   } else {
     config.mode = "development";
     config.devtool = "source-map";
