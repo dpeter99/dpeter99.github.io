@@ -19,7 +19,7 @@
 }
 
 main{
-    @include mixins.flex(collumn);
+    @include mixins.flex($direction:column);
 
 
     margin-top: 24px;
@@ -177,4 +177,13 @@ article p{
         }
     }
 
+}
+
+.article-list{
+    @include mixins.flex($direction: "column");
+    gap: 12px;
+
+    & h3{
+        margin-top: 0;
+    }
 }

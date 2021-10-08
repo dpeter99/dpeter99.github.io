@@ -1,0 +1,61 @@
+<main>
+  <div class="card card--big">
+    <div class="profile">
+      <img src="static/img/Aperture_Science_orange.png" alt="">
+
+      <div>
+        <div class="title">
+          <h2>dpeter99</h2>
+          <h4 class="title__sub">he/him</h4>
+        </div>
+        <div class="icons">
+          <span class="icon">
+            <img src="static/img/c.svg">
+          </span>
+          <span class="icon">
+            <img src="static/img/cpp.svg">
+          </span>
+          <span class="icon">
+            <img src="static/img/csharp.svg">
+          </span>
+          <span class="icon">
+            <img src="static/img/java.svg">
+          </span>
+          <span class="icon">
+            <img src="static/img/kotlin.svg">
+          </span>
+          <span class="icon"></span>
+          <span class="icon"></span>
+        </div>
+      </div>
+      <div class="profile__socials">
+        <a href="https://github.com/dpeter99" target="_blank">
+          <p>github</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="">
+      <h3>About me</h3>
+      <span>
+        <!--{{ .Content }}-->
+        <%- content %>
+      </span>
+
+      <h3>Highlighted projects</h3>
+
+      <ul class="cards-list">
+        <% pipeline.files.filter((d)=>ArticleHelper.subArticle(d)).filter((d)=>d.meta.highlighted == true).forEach(doc => {%>
+            <project-card href="<%= ArticleHelper.getLink(doc) %>">
+                <project-title title="<%= doc.meta.title %>" status="<%= JSON.stringify(doc.meta.state) %>"></project-title>
+
+                <p slot="description"> <%= doc.meta.description %></p>
+
+            </project-card>
+            
+        <% }) %>
+
+      </ul>
+
+  </div>
+</main>

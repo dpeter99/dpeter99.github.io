@@ -7,12 +7,22 @@
         <%- content %>
     </article>
     <div class="card">
-        <ul>
+        <ul class="article-list">
             <!-- Ranges through content/posts/*.md --> 
 
             <% pipeline.files.filter((d)=>ArticleHelper.subArticle(d)).forEach(doc => {%>
-            <li>
-                <a href="<%= ArticleHelper.getLink(doc) %>">{{.Date.Format "2006-01-02"}} | <%=doc.meta.title%></a>
+            <li >
+                <a href="<%= ArticleHelper.getLink(doc) %>">
+                <div class="card card--outline">
+                    <h3>
+                        <%=doc.meta.title%>
+                    </h3>
+                    <p>
+                        <%= doc.meta.description %>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum neque eaque sint mollitia beatae.
+                    </p>
+                </div>
+                </a>
             </li>
             <% }) %>
         </ul>
