@@ -1,12 +1,5 @@
 {
     "deno.lint": true,
     "deno.unstable": true,
-    
-    "frontMatter.content.pageFolders": [
-        {
-            "title": "content",
-            "path": "[[workspace]]/content"
-        }
-    ],
     "js/ts.implicitProjectConfig.experimentalDecorators": true
 }

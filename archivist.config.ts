@@ -1,7 +1,8 @@
 
 //import * as archivist from "./achivist_import.ts";
 
-import * as archivist from "https://raw.githubusercontent.com/dpeter99/archivist/fix/webpack_cmd/src/index.ts";
+import * as archivist from "https://raw.githubusercontent.com/dpeter99/archivist/0.1.0-alpha02/src/index.ts";
+
 
 let env : "development" | "production" = "development"
 if(Deno.args.includes("--env=prod")){
