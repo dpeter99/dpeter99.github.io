@@ -10,6 +10,7 @@
 @use "./card";
 @use "./navbar";
 @use "./background";
+@use "./content";
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 @import "./syntax";
@@ -21,11 +22,9 @@
 main{
     @include mixins.flex($direction:column);
 
-
     margin-top: 24px;
 
     display: flex;
-
 
     justify-content: center;
 
