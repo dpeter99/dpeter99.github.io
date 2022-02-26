@@ -43,6 +43,54 @@
           "type": "categories"
         }
       ]
+    },
+    {
+      "name": "project",
+      "fileType": "md",
+      "pageBundle": true,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime"
+        },
+        {
+          "title": "Last modified date",
+          "name": "lastmod",
+          "type": "datetime"
+        },
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Status",
+          "name": "state",
+          "type": "taxonomy",
+          "taxonomyId": "state"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        }
+      ]
     }
   ],
   "frontMatter.framework.id": "other",
@@ -56,5 +104,17 @@
       "title": "projects",
       "path": "c:/Users/dpete/Documents/Programing/dpeter99.github.io/content/projects"
     }
+  ],
+  "frontMatter.taxonomy.customTaxonomy": [
+    {
+      "id": "state",
+      "options": [
+        "active",
+        "finished",
+        "deep-freezed",
+        "on-hold"
+      ]
+    }
   ]
+  
 }

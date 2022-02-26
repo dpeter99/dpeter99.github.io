@@ -1,4 +1,5 @@
 ---
+type: project
 title: Shadow Engine
 date: 2021-07-06T16:06:26.000Z
 draft: false
@@ -7,7 +8,9 @@ state: on-hold
 highlighted: true
 slug: shadow-engine
 repo: 'https://github.com/dpeter99/ShadowEngine'
-lastmod: '2022-02-26T12:34:33.374Z'
+lastmod: '2022-02-26T15:53:41.479Z'
+categories:
+    - Game Engine
 ---
 
 Shadow Engine is my hobby game engine i have been working on for for quite a while now.
