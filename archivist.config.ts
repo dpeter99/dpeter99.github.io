@@ -1,7 +1,7 @@
 
-import * as archivist from "./achivist_import.ts";
+//import * as archivist from "./achivist_import.ts";
 
-//import * as archivist from "https://raw.githubusercontent.com/dpeter99/archivist/0.2.0/src/index.ts";
+import * as archivist from "https://raw.githubusercontent.com/dpeter99/archivist/0.2.0/src/index.ts";
 
 
 let env : "development" | "production" = "development"
