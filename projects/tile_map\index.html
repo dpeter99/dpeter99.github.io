@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mars</title>
+    <title>Tile_map</title>
     <!--<link rel="stylesheet" href="style/main.css">-->
 
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -107,23 +107,19 @@
 
 </nav>
 
-            <main class="article">
+            
+
+<main class="article">
     <article class="card">
         <div>
-            <div class="title">
-                <h2>
-                    Mars
-                </h2>
-                <h4 class="title__sub">
-                    
-                </h4>
-            </div>
-            <div>
-                <h2></h2>
-            </div>
+            <project-title title="Tile_map" status="[&#34;abandoned&#34;]" repo=""></project-title>
         </div>
         <div>
-            <p>Mars is a command parser library designed for [ARGUS]({{&lt; ref &quot;/projects/ARGUS/ARGUS.md&quot; &gt;}}).</p>
+            <p>TileMap's idea was started before Unity had an official Tilemap integrated into the engine. That implementation came out while I was making this. And while I did work on it after that, the inspiration died out soon after. This was also one of the few larger projects that I worked on.</p>
+<h3 class="heading" id="how-it-works" tabindex="-1"><a href="#how-it-works"></a>How it works</h3>
+<p>The base idea of the system is to split the map into chunks. For each of these chunks then we construct a mesh that we can manually submit for unity to draw. This way the whole visible area can be drawn by only a few meshes. The system has built-in support for layers as opposed to Unity's solution that uses multiple Tilemap objects for the same thing. It can also generate a collision mesh for the map.</p>
+<h3 class="heading" id="problems" tabindex="-1"><a href="#problems"></a>Problems</h3>
+<p>It uses a separate object for each tile which is not memory efficient.</p>
 
         </div>
     </article>

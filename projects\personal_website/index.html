@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Personal website</title>
     <!--<link rel="stylesheet" href="style/main.css">-->
 
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -107,24 +107,27 @@
 
 </nav>
 
-            <main class="article">
+            
+
+<main class="article">
     <article class="card">
         <div>
-            <div class="title">
-                <h2>
-                    
-                </h2>
-                <h4 class="title__sub">
-                    
-                </h4>
-            </div>
-            <div>
-                <h2></h2>
-            </div>
+            <project-title title="Personal website" status="[&#34;active&#34;]" repo=""></project-title>
         </div>
         <div>
-            <p>21 éves mérnök-informatikus egyetemi hallgató vagyok. Fő érdeklődési területem a játék és játék-motor fejlesztés, de az informatika minden területén próbálom bővíteni a tudásomat.
-Az eddigi legnagyob projetem a saját hobbi játék-motorom a ShadowEngine, amihez SDL2-őt és DX12-őt használok. De van sok más projektem is pédául: sok Unity és c# kísérleti projet, illetve a <a href="">Discord bot</a>-om és van egy fejlesztés allat álló <a href="">Minecraft mod</a>-om is.</p>
+            <p>As in this website. 😀</p>
+<p>The site is automatically built from the source files hosted on Github and published to the <code>gh-pages</code> branch. I'm using GH pages for the hosting.</p>
+<h3 class="heading" id="the-setup" tabindex="-1"><a href="#the-setup"></a>The setup</h3>
+<p>This site uses Hugo to build the static files that get served. This means that all of the pages get generated from <code>.md</code> files. This makes adding and changeling content really easy, no need to touch HTML files. Adding a new project or post is as simple as adding a new <code>.md</code> file in the correct folder. From there it chooses the correct template to generate the rest of the page. The templates are in the theme, which I'm making from the ground up. Currently, I use webpack to package and compile the theme. This is needed for scss compilation and later TS compilation as well.</p>
+<h3 class="heading" id="the-theme" tabindex="-1"><a href="#the-theme"></a>The theme</h3>
+<p>The theme is using SCSS for the styles.
+SCSS allows for more descriptive styles and also the creation of reusable components. With this I can make so called <code>mixin</code>s that can be included into multiple styles later. For example this is what I use for media selectors:</p>
+<pre><code linenos="table,hl_lines=[1],linenostart=1" class="language-scss">@include mixins.media-breakpoint-up(lg) { 
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+}
+</code></pre>
+<p>This then when scss compiles gets converted to the appropriate media query.</p>
+<p>SCSS needs to be compiled to normal css that every browser can understand. This is done by webpack and the <code>sass-loader</code> plugin.</p>
 
         </div>
     </article>
