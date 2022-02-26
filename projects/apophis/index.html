@@ -107,85 +107,37 @@
 
 </nav>
 
-            <main>
-  <div class="card card--big">
-    <div class="profile">
-      <img src="static/img/Aperture_Science_orange.png" alt="">
+            
 
-      <div>
-        <div class="title">
-          <h2>dpeter99</h2>
-          <h4 class="title__sub">he/him</h4>
+<main class="article">
+    <article class="card">
+        <div>
+            <project-title title="Apophis" status="[]" repo=""></project-title>
         </div>
-        <div class="icons">
-          <span class="icon">
-            <img src="static/img/c.svg">
-          </span>
-          <span class="icon">
-            <img src="static/img/cpp.svg">
-          </span>
-          <span class="icon">
-            <img src="static/img/csharp.svg">
-          </span>
-          <span class="icon">
-            <img src="static/img/java.svg">
-          </span>
-          <span class="icon">
-            <img src="static/img/kotlin.svg">
-          </span>
-          <span class="icon"></span>
-          <span class="icon"></span>
+        <div>
+            <p>Aphophis is a small university game engine. It was made for a Kotlin course as a homework.
+It is not designed to be blazing fast but as a testbed for new ideas. The fact that it is written in a managed language (Kotlin running on JVM) makes rapid testing easier.</p>
+<p>This is a low priority project and only gets developed when I don't have time or resources to work on some of the bigger projects.
+Because it is written in Kotlin I'm not planning on developing it further than a testbed for ideas. This is not because it is impossible to write performant good engines in Kotlin or Java but because I'm not fully comfortable with the language and I already have a game engine in C++ called ShadowEngine.</p>
+<h1 class="heading" id="basic-structure" tabindex="-1"><a href="#basic-structure"></a>Basic structure</h1>
+<h2 class="heading" id="the-engine" tabindex="-1"><a href="#the-engine"></a>The engine</h2>
+<p>Apophis engine has the core rendering loop and entity management. And any basic functionality that is needed for games.
+This includes the experimental Compose UI and the new input system.</p>
+<h3 class="heading" id="the-entities" tabindex="-1"><a href="#the-entities"></a>The entities</h3>
+<p>The entity system closely follows the one I made for ShadowEngine. It is based on the fact that all entities have an internal and external hierarchy. This allows entities to have complex internal structure as opposed to what for example unity has with a flat component list.</p>
+<h3 class="heading" id="the-in-game-ui" tabindex="-1"><a href="#the-in-game-ui"></a>The in game UI</h3>
+<p>This was one of the bigger experiments in during development. The engine provides the Compose Desktop UI library as the main in game UI solution.
+This means that one could theoretically use the same code for the game interface as they use for an android app.
+Achieving this was surprisingly easy, tho currently no input is propagated to the Compose subsystem. For that the new input system needs to be finished.</p>
+<h3 class="heading" id="the-input-system" tabindex="-1"><a href="#the-input-system"></a>The input system</h3>
+<p>This is another experiment that I'm using the engine for. The idea is to provide an extensible and highly configurable input system. Others usually call such a highly complex system an Action system as it abstracts all actual device inputs to actions that are meaningful form a game play perspective. Most of the functionality is modelled after what the &quot;New input system&quot; is capable of in Unity.
+If this version proves to be useful it will be ported over to ShadowEngine, and replace the one that exists there.</p>
+<h2 class="heading" id="the-editor" tabindex="-1"><a href="#the-editor"></a>The editor</h2>
+<p>The editor is the part of the engin that has the inspectors and hierarchy displays and helps run the game in a Unity/UE4 style.
+It acts as a wrapper around the main engine core and passes any relevant events to it.</p>
+
         </div>
-      </div>
-      <div class="profile__socials">
-        <a href="https://github.com/dpeter99" target="_blank">
-          <p>github</p>
-        </a>
-      </div>
-    </div>
-
-    <div class="">
-      <h3>About me</h3>
-      <span>
-        <!--{{ .Content }}-->
-        <p>I'm a 22-year-old guy studying Computer Sciences at university.
-My main interests are game and game engine programming but I try to expand my knowledge in every field of computing.
-Because of this I now have looked into hobby OS, website, full-stack, and even documentation development. This has resulted in a lot of started projects and even more that are still just ideas.</p>
-
-      </span>
-
-      <h3>Highlighted projects</h3>
-
-      <ul class="cards-list">
-        
-            <project-card href="/projects/arcane_rituals/index.html">
-                <project-title title="Arcane Rituals" status="[&#34;active&#34;,&#34;on-hold&#34;]"></project-title>
-
-                <p slot="description"> Arcane Rituals is a in development Minecraft mod that is based on magic and inspired by D&amp;D</p>
-
-            </project-card>
-            
-        
-            <project-card href="/projects/personal_website.html">
-                <project-title title="Personal website" status="[&#34;active&#34;]"></project-title>
-
-                <p slot="description"> The website you are on right now. It lists most of my current and old projects, and in the future some posts as well.</p>
-
-            </project-card>
-            
-        
-            <project-card href="/projects/shadow_engine/index.html">
-                <project-title title="Shadow Engine" status="[&#34;on-hold&#34;]"></project-title>
-
-                <p slot="description"> My hobby game engine using SDL2 and DX12.</p>
-
-            </project-card>
-            
-        
-
-      </ul>
-
-  </div>
+    </article>
 </main>
 
     </div>
