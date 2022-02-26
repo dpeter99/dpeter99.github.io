@@ -45,8 +45,8 @@
       <h3>Highlighted projects</h3>
 
       <ul class="cards-list">
-        <% pipeline.files.filter((d)=>ArticleHelper.subArticle(d)).filter((d)=>d.meta.highlighted == true).forEach(doc => {%>
-            <project-card href="<%= ArticleHelper.getLink(doc) %>">
+        <% pipeline.files.filter((d)=>helper.subArticle(d)).filter((d)=>d.meta.highlighted == true).forEach(doc => {%>
+            <project-card href="<%= helper.getLink(doc) %>">
                 <project-title title="<%= doc.meta.title %>" status="<%= JSON.stringify(doc.meta.state) %>"></project-title>
 
                 <p slot="description"> <%= doc.meta.description %></p>

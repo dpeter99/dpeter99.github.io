@@ -34,7 +34,8 @@ export class ProjectTitle extends LitElement {
       ${this.repo != undefined ? html`
       <div class="project_links">
         <a href="${this.repo}">
-          <span class="iconify" data-icon="fa-brands:github"></span>
+          <!--<span class="iconify" data-icon="fa-brands:github"></span>-->
+          <ic-icon icon="fa-brands:github"></span>
         </a>
       </div>
       ` : null}

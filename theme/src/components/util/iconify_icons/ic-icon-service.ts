@@ -3,7 +3,7 @@ export class IconifyIconService{
 
     private static instance: IconifyIconService;
 
-    icons: Map<string, {body:string}> = new Map();
+    icons: Map<string, IconifyIcon> = new Map();
 
     constructor(){
         if(IconifyIconService.instance != undefined){
@@ -21,7 +21,7 @@ export class IconifyIconService{
     }
 
 
-    static addIcon(key:string,icon:{body:string}){
+    static addIcon(key:string,icon:IconifyIcon){
         IconifyIconService.Instance.icons.set(key,icon);
     }
 

@@ -7,7 +7,7 @@ import { IconifyIconService } from './ic-icon-service';
 export class IconifyIconComponent extends LitElement {
 
     @property({ attribute: false })
-    iconData: {body:string}
+    iconData: IconifyIcon
 
     @property()
     icon: string
@@ -29,7 +29,7 @@ export class IconifyIconComponent extends LitElement {
         }
 
         return html`   
-        <svg>
+        <svg viewBox="0 0 ${this.iconData.height} ${this.iconData.width}">
             ${svg}
         </svg>
         `;

@@ -10,9 +10,9 @@
         <ul class="article-list">
             <!-- Ranges through content/posts/*.md --> 
 
-            <% pipeline.files.filter((d)=>ArticleHelper.subArticle(d)).forEach(doc => {%>
+            <% pipeline.files.filter((d)=>helper.subArticle(d)).forEach(doc => {%>
             <li >
-                <a href="<%= ArticleHelper.getLink(doc) %>">
+                <a href="<%= helper.getLink(doc) %>">
                 <div class="card card--outline">
                     <h3>
                         <%=doc.meta.title%>
