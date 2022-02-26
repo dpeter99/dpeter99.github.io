@@ -1,7 +1,9 @@
 
-//import * as archivist from "./achivist_import.ts";
+import * as archivist from "archivist/index.ts";
 
-import * as archivist from "https://raw.githubusercontent.com/dpeter99/archivist/0.2.0/src/index.ts";
+export {archivist};
+
+//import * as archivist from "https://raw.githubusercontent.com/dpeter99/archivist/0.2.0/src/index.ts";
 
 
 let env : "development" | "production" = "development"
@@ -53,4 +55,4 @@ export const config: archivist.Config = {
 
 //console.log(archivist);
 
-archivist.run(config);
+//archivist.run(config);
