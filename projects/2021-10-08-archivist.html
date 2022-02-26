@@ -107,32 +107,24 @@
 
 </nav>
 
-            <main class="article">
+            
+
+<main class="article">
     <article class="card">
         <div>
-            <div class="title">
-                <h2>
-                    Archivist
-                </h2>
-                <h4 class="title__sub">
-                    active,done
-                </h4>
-            </div>
-            <div>
-                <h2></h2>
-            </div>
+            <project-title title="Archivist" status="[&#34;active&#34;,&#34;finished&#34;]" repo="https://github.com/dpeter99/archivist"></project-title>
         </div>
         <div>
             <p>Archivist is a static site generator that generated this very page you are reading and everything on this site.</p>
-<p>Archivist is currently in alpha but, I consider most of the API stable. But it can still change, so any feedback is appreciated.</p>
+<p>Archivist is currently in alpha but, I consider most of the API stable. This doesn't mean it cna't change, so any feedback is appreciated.</p>
 <h2 class="heading" id="why%3F" tabindex="-1"><a href="#why%3F"></a>Why?</h2>
-<p>The need for Archivist first came to me when trying out <a href="https://github.com/tabatkins/bikeshed">Bikeshed</a> [^bikeshed].
+<p>The need for Archivist first came to me when trying out <a href="https://github.com/tabatkins/bikeshed">Bikeshed</a>.
 I needed something to generate single-page sites for me, but I found that Bikesed was lacking.
 So came Archivist, my static site generator that would allow as much customization as one could want.</p>
 <h2 class="heading" id="how-it-works" tabindex="-1"><a href="#how-it-works"></a>How it works</h2>
 <p>Archivist is a pipeline base system where the pipelines run a set of user-defined modules. Each module transforms the files as it wants. (Render markdown, remove a section, etc.)
-There are a set of built-in modules that help with first-time setup, but if one needs they can rewrite any or even all of the modules. This allows the user to swap out core components such as the markdown renderer or the template engine. This is usually not allowed by other generators. By allowing this much flexibility Archivist is more of a framework than a traditional site generator.</p>
-<p>Archivist is written for the Deno runtime. what this means is that for the use of the generator you don't need to download massive npm packages. It can be run in any folder as long as you have Deno itself downloaded.
+There are a set of built-in modules that help with first-time setup, but if somebody needs more they can rewrite any or even all of the modules. This allows the user to swap out core components such as the markdown renderer or the template engine. This is usually not allowed by other generators. By allowing this much flexibility Archivist is more of a framework than a traditional site generator.</p>
+<p>Archivist is written to run on the Deno runtime. What this means is that for the useage of the generator you don't need to download massive npm packages. It can be run in any folder as long as you have Deno itself downloaded.
 This is possible because Deno uses the proper URL includes and caches the results. Deno can also be configured to only allow reading, writing in certain folders to increase security.</p>
 <h2 class="heading" id="who-is-it-for%3F" tabindex="-1"><a href="#who-is-it-for%3F"></a>Who is it for?</h2>
 <p>Because archivist is not an out of box solution and needs some level of programming knowledge to set up, it is targeted towards programmers or sites that have a dedicated programmer.</p>
