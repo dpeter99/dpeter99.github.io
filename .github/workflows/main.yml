@@ -22,6 +22,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
+          cache: 'npm'
+          cache-dependency-path: theme/package-lock.json
       
       #- run: npm ci
 
