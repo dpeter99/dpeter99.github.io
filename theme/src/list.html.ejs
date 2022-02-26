@@ -10,7 +10,7 @@
         <ul class="article-list">
             <!-- Ranges through content/posts/*.md --> 
 
-            <% pipeline.files.filter((d)=>helper.subArticle(d)).forEach(doc => {%>
+            <% helper.subArticles().forEach(doc => {%>
             <li >
                 <a href="<%= helper.getLink(doc) %>">
                 <div class="card card--outline">

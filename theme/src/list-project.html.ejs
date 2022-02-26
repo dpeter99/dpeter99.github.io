@@ -6,9 +6,9 @@
         <%- content %>
 
         <ul class="cards-list">
-            <% pipeline.files.filter((d)=>helper.subArticle(d)).forEach(doc => {%>
+            <% helper.subArticles().forEach(doc => {%>
                 <project-card href="<%= helper.getLink(doc) %>">
-                    <project-title title="<%= doc.meta.title %>" status="<%= JSON.stringify(doc.meta.stastatete) %>"></project-title>
+                    <project-title title="<%= doc.meta.title %>" status="<%= JSON.stringify(doc.meta.state) %>"></project-title>
 
                     <p slot="description"> <%= doc.meta.description %></p>
 

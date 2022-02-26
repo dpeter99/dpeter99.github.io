@@ -38,7 +38,11 @@ export const config: archivist.Config = {
                 shiftHeadersAmount:0
             }),
             new archivist.ExtractResources(),
-            new archivist.TemplateModule(),
+            new archivist.TemplateModule({helper:(path, mod)=>{
+                return new archivist.ArticleHelper(path, mod, (doc)=>{
+                    return !doc.name.match(".hu");
+                })
+            }}),
             new archivist.OutputModule()
         )
     ]

@@ -1,10 +1,60 @@
 {
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
   "frontMatter.content.autoUpdateDate": true,
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "post",
+      "fileType": "md",
+      "pageBundle": true,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime"
+        },
+        {
+          "title": "Last modified date",
+          "name": "lastmod",
+          "type": "datetime"
+        },
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "other",
+  "frontMatter.content.publicFolder": "",
   "frontMatter.content.pageFolders": [
     {
-      "title": "content",
-      "path": "[[workspace]]/content"
+      "title": "posts",
+      "path": "c:/Users/dpete/Documents/Programing/dpeter99.github.io/content/posts"
+    },
+    {
+      "title": "projects",
+      "path": "c:/Users/dpete/Documents/Programing/dpeter99.github.io/content/projects"
     }
   ]
 }

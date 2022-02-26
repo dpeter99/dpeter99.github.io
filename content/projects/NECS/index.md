@@ -1,11 +1,13 @@
 ---
-title: "Necs"
-date: 2021-07-07T21:04:16+02:00
+title: Necs
+date: 2021-07-07T19:04:16.000Z
 draft: false
 highlighted: false
-description: "Not an Entity Component System. A small project for learning about Unity's Burst compiler and editor scripting"
-state: "active"
-repo: "https://github.com/dpeter99/NECS"
+description: Not an Entity Component System. A small project for learning about Unity's Burst compiler and editor scripting
+state:
+    - active
+repo: 'https://github.com/dpeter99/NECS'
+lastmod: '2022-02-26T12:34:11.279Z'
 ---
 
 ### **N**ot an **E**ntity **C**omponent **S**ystem

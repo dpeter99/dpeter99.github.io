@@ -2,9 +2,12 @@
 title: Broken SSD
 date: 2021-07-08T09:00:59.000Z
 draft: false
+lastmod: '2022-02-26T14:21:05.118Z'
 ---
 
-Soo on 07.04 my SSD broke down. But it wasn't an easy case of windows telling me that it went bad and I just got a new one.
+#### TL;DR  
+Soo on 07.04 my SSD broke down. But it wasn't an easy case of windows telling me that it went bad and I had to spend the better pat of a day diagnosing the problem.
+In the end I had to get a new one.
 
 ## The error
 I was using Windows just as any other day, and while leaving it to go eat, it broke. What I got back for was a normal Win logon screen but the background was just green (my accent color in windows).
@@ -28,7 +31,7 @@ As the image shows:
 SMART overall-health self-assessment test result: FAILED
 media has been placed in read only mode
 ```
-So this meant that my M.2 SSD was dead. So my whole plan shifter fast, as I needed to look find a new SSD and think up some thing to do in the mean time.
+So this meant that my M.2 SSD was dead. So my whole plan shifter fast, as I needed to look for a new SSD and think up some thing to do in the mean time.
 
 ### The result
 In the end I installed Linux mint on my spare old SSD and the next day switched to Manjaro as friends told me it was better. So far the experience is not tooo bad, but not a "suitable replacement" as it was advertised on the site 😅

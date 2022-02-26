@@ -6,7 +6,8 @@ description: My hobby game engine using SDL2 and DX12.
 state: on-hold
 highlighted: true
 slug: shadow-engine
-repo: "https://github.com/dpeter99/ShadowEngine"
+repo: 'https://github.com/dpeter99/ShadowEngine'
+lastmod: '2022-02-26T12:34:33.374Z'
 ---
 
 Shadow Engine is my hobby game engine i have been working on for for quite a while now.
