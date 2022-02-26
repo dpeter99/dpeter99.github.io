@@ -6,6 +6,7 @@ description: Mars is a command parser library designed for ARGUS
 state:
     - on-hold
     - finished
-lastmod: '2022-02-26T12:33:57.315Z'
+lastmod: '2022-02-26T20:22:28.092Z'
+type: project
 ---
 Mars is a command parser library designed for [ARGUS]({{< ref "/projects/ARGUS/ARGUS.md" >}}).

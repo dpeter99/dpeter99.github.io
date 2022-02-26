@@ -7,7 +7,8 @@ description: Not an Entity Component System. A small project for learning about 
 state:
     - active
 repo: 'https://github.com/dpeter99/NECS'
-lastmod: '2022-02-26T12:34:11.279Z'
+lastmod: '2022-02-26T20:21:15.293Z'
+type: project
 ---
 
 ### **N**ot an **E**ntity **C**omponent **S**ystem

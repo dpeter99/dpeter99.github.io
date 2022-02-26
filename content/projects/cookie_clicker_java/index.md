@@ -8,7 +8,8 @@ state:
 tags:
     - Uni
 repo: 'https://github.com/dpeter99/cookieclicker'
-lastmod: '2022-02-26T12:33:34.560Z'
+lastmod: '2022-02-26T20:22:16.457Z'
+type: project
 ---
 
 This colone of the poppular idle game Cookie clicker was make in less than 3 days for a University assignment. It uses a modular structure and should be faery easy to implement the rest of the game. 

@@ -14,6 +14,7 @@ export const config: archivist.Config = {
     detailedOutput: false,
     template: "./theme",
     outputPath: "./out",
+    outputURL: "https://dpeter99.github.io",
     env: env,
     preProcessors: [
         archivist.Pipeline.fromModules({name:"build_template", contentRoot:"./content/"},
@@ -38,6 +39,7 @@ export const config: archivist.Config = {
                 shiftHeadersAmount:0
             }),
             new archivist.ExtractResources(),
+            new archivist.WebUrlOutputResolver(),
             new archivist.TemplateModule({helper:(path, mod)=>{
                 return new archivist.ArticleHelper(path, mod, (doc)=>{
                     return !doc.name.match(".hu");

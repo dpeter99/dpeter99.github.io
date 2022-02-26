@@ -112,7 +112,8 @@
         "active",
         "finished",
         "deep-freezed",
-        "on-hold"
+        "on-hold",
+        "abandoned"
       ]
     }
   ]
