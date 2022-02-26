@@ -9,8 +9,5 @@
     "build:prod": "deno run --unstable --allow-read --allow-write --allow-run --allow-net --no-check ./archivist.config.ts --env=prod"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@iconify/icons-fa-brands": "^1.2.1"
-  }
+  "license": "ISC"
 }
