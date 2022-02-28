@@ -2,13 +2,20 @@
 title: Forge 1.18 update
 date: '2021-11-12T01:00:43.391Z'
 draft: false
-lastmod: '2022-02-26T15:40:24.427Z'
+lastmod: '2022-02-28T19:12:38.607Z'
 ---
 
 For anyone asking for 1.18 forge here is the rundown of the process that goes into updating it.
 
 ::: warning
-**1.18.2**
+**For players**
+
+Mods that work with 1.18.1 do not automatically mean they work with 1.18.2
+This means that modders need to update their mods individually, and the update may take time, even after forge is done.
+:::
+
+::: warning
+**For technical people**
 
 There will be a 1.18.1 Recommended Build.
 
