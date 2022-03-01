@@ -2,7 +2,7 @@
 title: Forge 1.18 update
 date: '2021-11-12T01:00:43.391Z'
 draft: false
-lastmod: '2022-02-28T19:12:38.607Z'
+lastmod: '2022-03-01T08:12:44.875Z'
 ---
 
 For anyone asking for 1.18 forge here is the rundown of the process that goes into updating it.
@@ -17,7 +17,7 @@ This means that modders need to update their mods individually, and the update m
 ::: warning
 **For technical people**
 
-There will be a 1.18.1 Recommended Build.
+There is a Recommended Build for 1.18.1 (˙˙1.18.1 - 39.1.0˙˙)
 
 The upgrade progress for 1.18.2 will probably take more time.
 This is because ForgeFlower needs to be upgraded to support new Java features used by Mojang.
@@ -26,12 +26,12 @@ This is because ForgeFlower needs to be upgraded to support new Java features us
 ## 1.18.2
 
 Work on the new version will only start when the full release drops.
-Dis doesn't mean that the pre-release and release candidate versions don't get inspected, and tested but these do not result in actual forge builds that are distributed.
+Dis doesn't mean that the pre-release and release candidate versions don't get inspected and tested but these do not result in actual forge builds that are distributed.
 
 ### Progress
 
- - [ ] Step 0: Have vanilla decompiling and compiling again without forge on top. This is needed because the decompiling is not perfect.
- - [ ] Step 1: Have forge compiling, this means that all the code modifications that forge adds still produce a compiling code. This process often requires disabling patches/features temporarily
+ - [x] Step 0: Have vanilla decompiling and compiling again without forge on top. This is needed because the decompiling is not perfect.
+ - [x] Step 1: Have forge compiling, this means that all the code modifications that forge adds still produce a compiling code. This process often requires disabling patches/features temporarily
  - [ ] Step 2: Once forge compiles and the initial set of patches can be produced, then forge can start to be properly developed, until it's in a usable state enough to use. In this phase, we make sure that none of the forge extra code parts break the original functionality.
  - [ ] Step 3: fix all the missing features (that make sense to fix), cleanup, add new hooks, etc. This is the longest part as people have to figure out what Mojang did and how to expose it to the modders in a safe way-- this will take some weeks, and result in the recommended build
 
@@ -44,7 +44,7 @@ Dis doesn't mean that the pre-release and release candidate versions don't get i
  - [x] Step 0: Have vanilla decompiling and compiling again without forge on top. This is needed because the decompiling is not perfect.
  - [x] Step 1: Have forge compiling, this means that all the code modifications that forge adds still produce a compiling code. This process often requires disabling patches/features temporarily
  - [x] Step 2: Once forge compiles and the initial set of patches can be produced, then forge can start to be properly developed, until it's in a usable state enough to use. In this phase, we make sure that none of the forge extra code parts break the original functionality.
- - [ ] Step 3: fix all the missing features (that make sense to fix), cleanup, add new hooks, etc. This is the longest part as people have to figure out what Mojang did and how to expose it to the modders in a safe way-- this will take some weeks, and result in the recommended build
+ - [x] Step 3: fix all the missing features (that make sense to fix), cleanup, add new hooks, etc. This is the longest part as people have to figure out what Mojang did and how to expose it to the modders in a safe way-- this will take some weeks, and result in the recommended build
 
 
 Most of this takes a long time and people are doing it in their free time so be patient and don't ask them.
