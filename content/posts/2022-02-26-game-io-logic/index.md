@@ -59,3 +59,14 @@ In source engine you can set up connections between entities by connecting one o
 These connections can be easily managed form the editor. The user can set up connections define a delay to apply to the event, and also send optional parameters.
 
 ![The broken screen](IO_menu.png)
+
+The interface has a Convinient dropdown to select the output and an object picker to select the targets.
+
+The power of this system comes from the fact that there are many Logical entities that allow the implementation of more complex logic.
+
+### The internals
+Most of the code for this is found in the [cbase.cpp](https://github.com/nillerusr/source-engine/blob/master/game/server/cbase.cpp#L251) file of the source code. After a bit of reading we cna see that it calls the ``g_EventQueue.AddEvent`` to actually send the event. This has a few parameters that, define the name of the Input to call, the name of the target as string. It also takes in the rest of the things we cna configure in the UI, the delay, the optional parameter.
+
+After this the [EventQueue](https://github.com/ValveSoftware/source-sdk-2013/blob/master/sp/src/game/server/eventqueue.h) puts this into a list sorted by the time the event needs to fire (Current time + delay).
+An interesting thing to note is that the EventQueue does not fire the event in the same call. The events are actually acted upon at the top of the core game update loop. This is done in the [ServiceEvents](https://github.com/nillerusr/source-engine/blob/master/game/server/cbase.cpp#L901) function.
+This aproach makes sure that long chains of events can't cause lag.
