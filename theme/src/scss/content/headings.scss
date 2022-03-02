@@ -1,0 +1,14 @@
+
+
+@for $index from 1 through 6 {
+    h#{$index}{
+        font-size: ((6-$index) * 7px);
+        //font: 32px/42px;
+    }
+}
+
+.title h1{
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}

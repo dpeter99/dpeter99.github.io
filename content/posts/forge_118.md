@@ -2,7 +2,7 @@
 title: Forge 1.18 update
 date: '2021-11-12T01:00:43.391Z'
 draft: false
-lastmod: '2022-03-01T08:12:44.875Z'
+lastmod: '2022-03-01T10:08:05.717Z'
 ---
 
 For anyone asking for 1.18 forge here is the rundown of the process that goes into updating it.
@@ -17,7 +17,7 @@ This means that modders need to update their mods individually, and the update m
 ::: warning
 **For technical people**
 
-There is a Recommended Build for 1.18.1 (˙˙1.18.1 - 39.1.0˙˙)
+There is a Recommended Build for 1.18.1 (``1.18.1 - 39.1.0``)
 
 The upgrade progress for 1.18.2 will probably take more time.
 This is because ForgeFlower needs to be upgraded to support new Java features used by Mojang.

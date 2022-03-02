@@ -10,10 +10,13 @@
 @use "./card";
 @use "./navbar";
 @use "./background";
-@use "./content";
+
+@use "content";
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 @import "./syntax";
+
+
 
 :root{
     font-size: 16px;
@@ -62,13 +65,13 @@ main{
     }
 
 }
-
+/*
 h2{
     margin: 0;
     margin-bottom: 10px;
     font-size: 35px;
 }
-
+*/
 .profile{
     box-sizing: border-box;
 
@@ -146,7 +149,7 @@ p>a{
     text-decoration: underline;
     color: colors.$accent-color;
 }
-
+/*
 article h2{
     margin-top: 12px;
 }
@@ -156,7 +159,7 @@ article img{
     margin-top: 12px;
     width: 50%;
 }
-
+*/
 article p{
     margin-bottom: 12px;
 }

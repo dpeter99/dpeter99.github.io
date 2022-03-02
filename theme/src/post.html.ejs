@@ -2,16 +2,18 @@
     <article class="card">
         <div>
             <div class="title">
-                <h2>
+                <h1>
                     <%= meta.title%>
-                </h2>
+                </h1>
                 <h4 class="title__sub">
                     <%= meta.status%>
                 </h4>
             </div>
+            <% if(meta.description) {%>
             <div>
-                <h2></h2>
+                <h2><%= meta.description %></h2>
             </div>
+            <% } %>
         </div>
         <div>
             <%- content %>
