@@ -152,10 +152,14 @@ This means that the system needs good editor tooling and integration to allow fo
 <p>Source has an Input/Output System, it is a highly robust system for designing world logic. For example, all of Portal's puzzles are made using it. The main strength of it is that after making the basic components the designers can do everything else without much help from the programmers.
 This is achieved with full integration with the Hammer world editor, and many smaller logical building blocks.</p>
 <h3 class="heading" id="i%2Fo-system" tabindex="-1"><a href="#i%2Fo-system"></a>I/O system</h3>
-<p>The <a href="https://developer.valvesoftware.com/wiki/Inputs_and_Outputs">valve developers wiki</a> gives a really good overview of how it works, but I will try to summarize it here as well.</p>
+<p>The <a href="https://developer.valvesoftware.com/wiki/Inputs_and_Outputs">Valve developers wiki</a> gives a really good overview of how it works, but I will try to summarize it here as well.</p>
 <p>Let's start with what is visible from the system to the user. Anything that can move or has any amount of data or logic is called an entity in Source. These are special as they can have more data on them. One of the most basic examples for an entity is a model, as these need the path of the model to draw, and the textures or shaders to use.</p>
-<p>A more interesting example of entities are the non visible ones, like spawners or particle emitters.
+<p>A more interesting example of entities are the non visible ones, like spawners or particle emitters. These are not visible in the game, only in the editor.
 <img src="source_entities.jpg" alt="The broken screen"></p>
+<p>All of these entities have an Input Output tab in the editor</p>
+<p>In source engine you can set up connections between entities by connecting one of the entities outputs to another entitiy's input. These Outputs act as events and they are speciic to the type of the entity. For example a &quot;trigger region entitiy&quot; might have an output named <code>OnTrigger</code>, they also have Outputs inherited form their parent classes. Than these Outputs can be maped to the Inputs on other entities. These Inputs are basically actions they can perform. For example a fire particle entity might have <code>StartFire</code> and <code>Extinguish</code>.</p>
+<p>These connections can be easily managed form the editor. The user can set up connections define a delay to apply to the event, and also send optional parameters.</p>
+<p><img src="IO_menu.png" alt="The broken screen"></p>
 
         </div>
     </article>
