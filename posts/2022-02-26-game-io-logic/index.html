@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game engine logy systems</title>
-    <meta content="dpeter99 - Game engine logy systems" property="og:title" />
+    <title>Game engine logic systems</title>
+    <meta content="dpeter99 - Game engine logic systems" property="og:title" />
     <meta content="" property="og:description" />
     <meta content=" https://dpeter99.github.io/posts/2022-02-26-game-io-logic " property="og:url" />
     <!--<meta content="https://embed.com/embedimage.png" property="og:image" />-->
@@ -116,21 +116,46 @@
     <article class="card">
         <div>
             <div class="title">
-                <h2>
-                    Game engine logy systems
-                </h2>
+                <h1>
+                    Game engine logic systems
+                </h1>
                 <h4 class="title__sub">
                     
                 </h4>
             </div>
-            <div>
-                <h2></h2>
-            </div>
+            
         </div>
         <div>
             <p>Almost all games need some way to connect actions in the game world with events they cause. The simplest example is pressing a button to open a door.
-These connections in some cases can be hardcoded, &quot;<em>every door needs a button to open</em>&quot; and this is perfectly fine when we know the scope of the game.
-But we can't always know the scope this precisely</p>
+These connections in some cases can be hardcoded, &quot;<em>every door needs a button to open</em>&quot; and this is perfectly fine when we know that this will be true for the whole game.
+But we can't always know the scope this precisely, and designers like to experiment to find the best way to interact with the game world.</p>
+<h1 class="heading" id="the-problem" tabindex="-1"><a href="#the-problem"></a>The problem</h1>
+<p>These logical connections need to be editable by as many people as possible. A level designer might want to add a door that needs a key, or a cinematic designer might want to play a complex sequence when the player reaches a segment of the level.
+This means that these connections can't be implemented in code for each case. As that would either require a programmer to step in and write each connection, which would make development slow and cause friction between departments.
+The other option would be that the designers would need to write the connection code, but this would mean that the designers need to be able to write code. This is rarely the case and would mean that many good designers would need to learn a new discipline.</p>
+<h1 class="heading" id="the-solution" tabindex="-1"><a href="#the-solution"></a>The solution</h1>
+<p>The solution to this problem is the creation of a system that handles the logical connection of different parts of the game. Such a system would need to be:</p>
+<ol>
+<li>Easy to use, eg. set up new connections</li>
+<li>Generic</li>
+<li>Fast</li>
+</ol>
+<h2 class="heading" id="1.-easy-to-use" tabindex="-1"><a href="#1.-easy-to-use"></a>1. Easy to use</h2>
+<p>The system needs to be easy to understand and use while developing the game. Any designer and non-programmer needs to be able to add new connections to create the game world they envisioned.
+This means that the system needs good editor tooling and integration to allow for seamless workflows.</p>
+<h2 class="heading" id="2.-generic" tabindex="-1"><a href="#2.-generic"></a>2. Generic</h2>
+<p>The system needs to be able to communicate with as many parts of the game and game engine, as possible.</p>
+<h1 class="heading" id="existing-solutions" tabindex="-1"><a href="#existing-solutions"></a>Existing solutions</h1>
+<p>There are existing similar systems in other game engines. I could find two already existing ones that we can take inspiration from. These are the ones that are at least Source Available and thus we can see how they are implemented.</p>
+<h2 class="heading" id="source-engine" tabindex="-1"><a href="#source-engine"></a>Source Engine</h2>
+<p>Source Engine is made by valve and is a highly battle-tested engine. It is one of the oldest engine but we can learn a lot from it as many of the ideas developed for it are now industry standard.</p>
+<p>Source has an Input/Output System, it is a highly robust system for designing world logic. For example, all of Portal's puzzles are made using it. The main strength of it is that after making the basic components the designers can do everything else without much help from the programmers.
+This is achieved with full integration with the Hammer world editor, and many smaller logical building blocks.</p>
+<h3 class="heading" id="i%2Fo-system" tabindex="-1"><a href="#i%2Fo-system"></a>I/O system</h3>
+<p>The <a href="https://developer.valvesoftware.com/wiki/Inputs_and_Outputs">valve developers wiki</a> gives a really good overview of how it works, but I will try to summarize it here as well.</p>
+<p>Let's start with what is visible from the system to the user. Anything that can move or has any amount of data or logic is called an entity in Source. These are special as they can have more data on them. One of the most basic examples for an entity is a model, as these need the path of the model to draw, and the textures or shaders to use.</p>
+<p>A more interesting example of entities are the non visible ones, like spawners or particle emitters.
+<img src="source_entities.jpg" alt="The broken screen"></p>
 
         </div>
     </article>
