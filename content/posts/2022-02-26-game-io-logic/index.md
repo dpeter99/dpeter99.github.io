@@ -4,7 +4,7 @@ slug: game-io-logic
 description: null
 author: dpeter99
 date: 2019-08-22T15:20:28.000Z
-lastmod: '2022-03-02T08:27:22.286Z'
+lastmod: 2022-03-02T12:50:56.167Z
 draft: true
 tags: []
 categories: []
@@ -45,9 +45,17 @@ Source has an Input/Output System, it is a highly robust system for designing wo
 This is achieved with full integration with the Hammer world editor, and many smaller logical building blocks.
 
 ### I/O system
-The [valve developers wiki](https://developer.valvesoftware.com/wiki/Inputs_and_Outputs) gives a really good overview of how it works, but I will try to summarize it here as well.
+The [Valve developers wiki](https://developer.valvesoftware.com/wiki/Inputs_and_Outputs) gives a really good overview of how it works, but I will try to summarize it here as well.
 
 Let's start with what is visible from the system to the user. Anything that can move or has any amount of data or logic is called an entity in Source. These are special as they can have more data on them. One of the most basic examples for an entity is a model, as these need the path of the model to draw, and the textures or shaders to use.
 
-A more interesting example of entities are the non visible ones, like spawners or particle emitters.
+A more interesting example of entities are the non visible ones, like spawners or particle emitters. These are not visible in the game, only in the editor.
 ![The broken screen](source_entities.jpg)
+
+All of these entities have an Input Output tab in the editor
+
+In source engine you can set up connections between entities by connecting one of the entities outputs to another entitiy's input. These Outputs act as events and they are speciic to the type of the entity. For example a "trigger region entitiy" might have an output named ``OnTrigger``, they also have Outputs inherited form their parent classes. Than these Outputs can be maped to the Inputs on other entities. These Inputs are basically actions they can perform. For example a fire particle entity might have ``StartFire`` and ``Extinguish``. 
+
+These connections can be easily managed form the editor. The user can set up connections define a delay to apply to the event, and also send optional parameters.
+
+![The broken screen](IO_menu.png)
