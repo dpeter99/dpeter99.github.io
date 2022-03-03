@@ -4,7 +4,7 @@ slug: game-io-logic
 description: null
 author: dpeter99
 date: 2019-08-22T15:20:28.000Z
-lastmod: 2022-03-02T12:50:56.167Z
+lastmod: 2022-03-03T14:54:19.649Z
 draft: true
 tags: []
 categories: []
@@ -74,8 +74,9 @@ This entity can comare two inputs and fire an Output ased on the values recieved
 - **[logic_relay](https://developer.valvesoftware.com/wiki/Logic_relay) entity**
 Using this entity it is possible to forward a sinlge event to many other entities.
 - **[npc_maker](https://developer.valvesoftware.com/wiki/Npc_maker) entity**
-This entity spawns NPSs and has inouts to stop and start it, or spwn a single one.
-It also has 
+This entity is responsible for spawning NPCs, it has properties to specify the type, squad and relations, they will have.
+There are inputs to stop and start spawing, or spwn a single one.
+
 
 
 ### The internals
