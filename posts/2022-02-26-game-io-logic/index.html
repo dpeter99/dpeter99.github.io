@@ -170,8 +170,8 @@ This entity can comare two inputs and fire an Output ased on the values recieved
 <li><strong><a href="https://developer.valvesoftware.com/wiki/Logic_relay">logic_relay</a> entity</strong>
 Using this entity it is possible to forward a sinlge event to many other entities.</li>
 <li><strong><a href="https://developer.valvesoftware.com/wiki/Npc_maker">npc_maker</a> entity</strong>
-This entity spawns NPSs and has inouts to stop and start it, or spwn a single one.
-It also has</li>
+This entity is responsible for spawning NPCs, it has properties to specify the type, squad and relations, they will have.
+There are inputs to stop and start spawing, or spwn a single one.</li>
 </ul>
 <h3 class="heading" id="the-internals" tabindex="-1"><a href="#the-internals"></a>The internals</h3>
 <p>Most of the code for this is found in the <a href="https://github.com/nillerusr/source-engine/blob/master/game/server/cbase.cpp#L251">cbase.cpp</a> file of the source code. After a bit of reading we cna see that it calls the <code>g_EventQueue.AddEvent</code> to actually send the event. This has a few parameters that, define the name of the Input to call, the name of the target as string. It also takes in the rest of the things we cna configure in the UI, the delay, the optional parameter.</p>
