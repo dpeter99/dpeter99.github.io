@@ -9,6 +9,8 @@ For anyone asking for 1.18 forge here is the rundown of the process that goes in
 
 ::: warning
 **For players**
+There are builds of forge available, these currently have bugs but need testing.
+If you have the time please try them out and report any bugs you find in discord.
 
 Mods that work with 1.18.1 do not automatically mean they work with 1.18.2
 This means that modders need to update their mods individually, and the update may take time, even after forge is done.
@@ -32,7 +34,7 @@ Dis doesn't mean that the pre-release and release candidate versions don't get i
 
  - [x] Step 0: Have vanilla decompiling and compiling again without forge on top. This is needed because the decompiling is not perfect.
  - [x] Step 1: Have forge compiling, this means that all the code modifications that forge adds still produce a compiling code. This process often requires disabling patches/features temporarily
- - [ ] Step 2: Once forge compiles and the initial set of patches can be produced, then forge can start to be properly developed, until it's in a usable state enough to use. In this phase, we make sure that none of the forge extra code parts break the original functionality.
+ - [x] Step 2: Once forge compiles and the initial set of patches can be produced, then forge can start to be properly developed, until it's in a usable state enough to use. In this phase, we make sure that none of the forge extra code parts break the original functionality.
  - [ ] Step 3: fix all the missing features (that make sense to fix), cleanup, add new hooks, etc. This is the longest part as people have to figure out what Mojang did and how to expose it to the modders in a safe way-- this will take some weeks, and result in the recommended build
 
 
