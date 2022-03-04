@@ -2,10 +2,10 @@
 type: post
 title: Game engine logic systems
 slug: 2022-02-26-game-io-logic
-description: null
+description: Samll exploration of game event systems for a University project
 author: dpeter99
-date: 2019-08-22T15:20:28.000Z
-lastmod: 2022-03-04T17:52:29.463Z
+date: 2022-03-04T17:55:48.039Z
+lastmod: 2022-03-04T17:56:28.214Z
 draft: false
 tags: []
 categories: []
