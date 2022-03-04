@@ -5,8 +5,8 @@ slug: 2022-02-26-game-io-logic
 description: null
 author: dpeter99
 date: 2019-08-22T15:20:28.000Z
-lastmod: 2022-03-04T14:54:53.134Z
-draft: true
+lastmod: 2022-03-04T17:52:29.463Z
+draft: false
 tags: []
 categories: []
 ---
@@ -46,7 +46,7 @@ A more interesting example of entities are the non-visible ones, like spawners o
 
 All of these entities have an Input-Output tab in the editor
 
-In the Source engine, you can set up connections between entities by connecting one of the entities outputs to another entity's input. These Outputs act as events and they are specific to the type of entity. For example a "trigger region entity" might have an output named ``OnTrigger``, they also have Outputs inherited from their parent classes. Then these Outputs can be mapped to the Inputs on other entities. These Inputs are basically actions they can perform. For example, a fire particle entity might have ``StartFire`` and ``Extinguish``. 
+In the Source engine, you can set up connections between entities by connecting one of the entities' outputs to another entity's input. These Outputs act as events and they are specific to the type of entity. For example a "trigger region entity" might have an output named ``OnTrigger``, they also have Outputs inherited from their parent classes. Then these Outputs can be mapped to the Inputs on other entities. These Inputs are basically actions they can perform. For example, a fire particle entity might have ``StartFire`` and ``Extinguish``. 
 
 These connections can be easily managed from the editor. The user can set up connections to define a delay to apply to the event, and also send optional parameters.
 
@@ -54,7 +54,7 @@ These connections can be easily managed from the editor. The user can set up con
 
 The interface has a Convenient dropdown to select the output and an object picker to select the targets.
 
-The power of this system comes from the fact that there are many Logical entities that allow the implementation of more complex logic.
+The power of this system comes from the fact that there are many Logical entities. This allows the implementation of more complex logic.
 
 ### Examples
 
@@ -94,42 +94,51 @@ This approach makes sure that long chains of events can't cause lag.
 
 ## Unity
 
-Unity has released an example project that show how a more complex game might be put together in their engine. This project is a small adventure game with localized logic puzzles.
+Unity has released an example project that shows how a more complex game might be put together in their engine. This project is a small adventure game with localized logic puzzles.
 
-They made an event system that they talk about in the accompanying Unity Learn course. In their scripts they send commands rather than events, this is only a naming difference, they mean the same thing as events.
-This event system is a simple one that only has a fixed number of event types ( ``None, Activate, Deactivate, Open, Close, Spawn, Destroy, Start, Stop``). These are only for the purpose of differentiating between the events sent to the same game object.
+They made an event system that they talked about in the accompanying [Unity Learn](https://learn.unity.com/tutorial/3d-game-kit-reference-guide?uv=2020.3&projectId=5c514897edbc2a001fd5bdd0#5c7f8528edbc2a002053b73e) course. In their scripts they send commands rather than events, this is only a naming difference, they mean the same thing as events.
+This event system is a simple one that only has a fixed number of event types ( ``None, Activate, Deactivate, Open, Close, Spawn, Destroy, Start, Stop``). These are only to differentiate between the events sent to the same game object.
 
 ### Components
 #### Sending commands
-Sending commands can be done by any script inheriting from `SendGameCommand` . 
-This has a ``Send()`` function that other scripts can use to send events. There are many pre-made scripts that inherit from `SendGameCommand`. 
+Sending commands can be done by any script inheriting from `SendGameCommand`. 
+This has a ``Send()`` function that other scripts can use to send events. There are many, pre-made scripts, that inherit from `SendGameCommand`. 
 For example, `SendOnCollisionEnter`, `SendOnCollisionExit`, `SendOnCollisionStay` These send a command (event) on the respective collision event. There is also a full set of these for trigger events.
 The target of the events is a script called: `Game Command Receiver`.
 
 ![](Unity_GameKIT_Switch.png)
-In the picture above, you can see these components in action. There is a simple box collider and when the player enters (layer filter set to: `player`), it sends an `Activate`  command to the GameObject `Crystal`.
+In the picture above, you can see these components in action. There is a simple box collider and when the player enters (layer filter set to `player`), it sends an `Activate`  command to the GameObject `Crystal`.
 
 #### Receiving commands
-Any GameObject that needs to receive commands (events) needs the `Game Command Receiver` component. This acts as a hub for directing the event to the right Function inside the right component, this is done by having an internal list of which event to send to which component of the GameObject. These are registered in by the component that wants to receive a given event. 
+Any GameObject that needs to receive commands (events) needs the `Game Command Receiver` component. This acts as a hub for directing the event to the right Function inside the right component, this is done by having an internal list of which event to send to which component of the GameObject. These are registered by the component that wants to receive a given event. 
 Every script that wants to process commands is inherited from `GameCommandHandler` Witch registers itself in its `Awake` method.
-It also gives fields for setting what event to listen to, and to set a cooldown and start timer.
+It also gives fields for setting what event to listen to, setting a cooldown, and starting the timer.
 
 There are many already made scripts that do inherit from `GameCommandHandler`.
 These can do a variety of things like:
-- `PlaySound` that will play a sound when it get's a command
-- `SetGameObjectActive` That will activate and deactivate a set of target game objects.
-- `SimpleTranslator` Is a script that can move an object from a start position to and end position with a lot of configurable options. This is for example used for the Big doors in the demo scene ( `DoorHuge` in scene `Level1`  ).
+- `PlaySound` that will play a sound when it gets a command
+- `SetGameObjectActive` will activate and deactivate a set of target game objects.
+- `SimpleTranslator` Is a script that can move an object from a start position to an end position with a lot of configurable options. This is for example used for the Big doors in the demo scene ( `DoorHuge` in scene `Level1`  ).
 
 ![](Unity_GameKIT_Crystal.png)
 
-In the above image, we can see the other half of the previous example. This is the target of the switch form before. It has the Command receiver script that  was targeted in the switch. There is also a material switcher component that is set to listen to `Activate` events, it is also set so that is only fires once. When it fires, it will switch out the material, so the gem will glow with blue.
+In the above image, we can see the other half of the previous example. This is the target of the switch from before. It has the Command receiver script that was targeted in the switch. The inspector of the receiver shows a list of scripts that send events to this, so it is easier to navigate backwards in the connections. There is also a material switcher component that is set to listen to `Activate` events, it is also set so that it only fires once. When it fires, it will switch out the material, so the gem will glow with blue.
 
 ![](Unity_GameKIT_Crystal_2.png)
 
-With the gizmos turned back on we can see that the system has a deep editor integration as it shows the connected componets with arrows leading to and from event sources.
+With the gizmos turned back on we can see that the system has a deep editor integration as it shows the connected components with arrows leading to and from event sources.
 
+![](Unity_GameKIT_Counter.png)
 
+There is also a second GameObject targeted by the Switch, this is a counter. When it gets activated 3 times, it fires a second command that moves the door down.
 
+### Problems
+
+The system doesn't allow a single component to target multiple objects, this results in the duplication of scripts on the same GameObjects. A good example of this is the switch above, where it has to trigger the graphical change on the Gem and the Counter increment.
+
+The fact that there is a limited number of event types is also a means that expressing more complex or abstract actions becomes hard, and some commands might end up with non-intuitive names. 
+
+The system also calls the target immediately, this means that if there is a chain in the calls (for example what a rellay component would do) the game might lag for a single frame while all the calls are made. 
 
 # The requirements
 
@@ -151,4 +160,23 @@ The system needs to be able to communicate with as many parts of the game and ga
 
 
 ## 3. Fast
-A system with this level of integration and usage needs to be fast. This is 
+A system with this level of integration and usage needs to be fast. This can be achieved by using a similar system as what Valve is using. By only dispatching events at the top of the event loop, we can make sure, a longer event chain doesn't make the game stop. But the Valve system isn't perfect either. They do full name-based lookups which allows for wild card addressing and targeting multiple entities with the same name. But it can be costly.
+
+# The proposal so-far
+This exploration of game world logic systems was made for a University project. Our group is making a larger open-world game, and the need for a way to interconnect our systems came up. The plan is to use a single unified system for interacting with the world and completing quests.
+## Entities
+From these examples, we have decided that in our system we will keep the idea of a single Component that marks the GameObject as something that can send and/or receive events. This component will mark the GO as an entity, and make sure it has a unique id (Most likely a UUID)
+
+These Entities would register themselves to a list of all loaded entities that would allow for fast ID-based lookup of them when sending events. These might have a grouping based on the sub-scene to allow for fast and comprehensive unloading.
+
+## The question of time travel
+In our game, there is a chance that the target entity is not loaded, especially if the event is targeting multiple of the same type. The problem here is that if we just run the event when the entity gets loaded, then we might get undesired results. For example, when an explosion gets triggered, then that explosion will play out when that part of the map get's loaded next. This might only happen in-game days later.
+
+To avoid this, we might need to introduce states or some other way to differentiate between events that got delayed because of the target not being loaded. A simple solution would be to have a companion function for all events that care about this difference. This secondary function would only get called when the event was delayed. This still means that each component is responsible for handling the difference. 
+
+## The problem of cloning
+There is also a second problem with only referring to entities with their UUID as this means that when a more complex entity is cloned, one that might have sub-entities, will have the same UUID as the one it was cloned from.
+
+An example would be level designers using a prefab for a simple door. As they drag in the door, the UUID would stay the same and when firing a door open event, all the doors would open. Or when in-game a new enemy would spawn, it would also have conflicting internal IDs and no way to differentiate them from other enemies.
+
+The solution to this problem is to make sure that when we clone any GameObject that is an entity, we regenerate the UUIDs
