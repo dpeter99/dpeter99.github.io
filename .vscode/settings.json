@@ -1,5 +1,9 @@
 {
     "deno.lint": true,
     "deno.unstable": true,
-    "js/ts.implicitProjectConfig.experimentalDecorators": true
+    "js/ts.implicitProjectConfig.experimentalDecorators": true,
+    "[markdown]": {
+    },
+    "frontMatter.framework.startCommand": "npm run dev",
+    "frontMatter.preview.host": "http://127.0.0.1:8888/posts"
 }

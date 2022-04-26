@@ -94,15 +94,15 @@
     }
   ],
   "frontMatter.framework.id": "other",
-  "frontMatter.content.publicFolder": "",
+  "frontMatter.content.publicFolder": "content/static",
   "frontMatter.content.pageFolders": [
     {
       "title": "posts",
-      "path": "c:/Users/dpete/Documents/Programing/dpeter99.github.io/content/posts"
+      "path": "[[workspace]]/content/posts"
     },
     {
       "title": "projects",
-      "path": "c:/Users/dpete/Documents/Programing/dpeter99.github.io/content/projects"
+      "path": "[[workspace]]/content/projects"
     }
   ],
   "frontMatter.taxonomy.customTaxonomy": [

@@ -1,21 +1,30 @@
 ---
 title: Archivist
 slug: archivist
-description: Archivist is a unopinionated static site generator. I use it to generate my own personal blog.
+description: Archivist is an un-opinionated static site generator. I use it to generate my
+  personal blog.
 author: dpeter99
-date: '2021-10-08T17:52:23.980Z'
-lastmod: '2022-02-26T15:42:58.549Z'
+date: 2021-10-08T17:52:23.980Z
+lastmod: 2022-03-24T09:21:11.760Z
 draft: false
 tags: []
 categories:
-    - project
+  - project
 highlited: true
 state:
-    - active
-    - finished
+  - active
+  - finished
 type: project
-repo: 'https://github.com/dpeter99/archivist'
+repo: https://github.com/dpeter99/archivist
 ---
+
+**Technologies used**
+- Deno
+- Typescript
+- markdown-it
+
+
+
 
 Archivist is a static site generator that generated this very page you are reading and everything on this site.
 
@@ -23,7 +32,7 @@ Archivist is currently in alpha but, I consider most of the API stable. This doe
 
 ## Why?
 The need for Archivist first came to me when trying out [Bikeshed](https://github.com/tabatkins/bikeshed).
-I needed something to generate single-page sites for me, but I found that Bikeshed was lacking. 
+I needed something to generate single-page sites for me, but I found that Bikeshed was lacking[^bikeshed]. 
 So came Archivist, my static site generator that would allow as much customization as one could want.
 
 ## How it works

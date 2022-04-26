@@ -1,4 +1,4 @@
 
-import {config, archivist} from "./archivist.conf.ts";
+import {config, archivist} from "./archivist.config.ts";
 
 archivist.run(config);
