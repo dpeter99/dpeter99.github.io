@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archivist</title>
     <meta content="dpeter99 - Archivist" property="og:title" />
-    <meta content="Archivist is a unopinionated static site generator. I use it to generate my own personal blog." property="og:description" />
+    <meta content="Archivist is an un-opinionated static site generator. I use it to generate my personal blog." property="og:description" />
     <meta content=" https://dpeter99.github.io/projects/archivist " property="og:url" />
     <!--<meta content="https://embed.com/embedimage.png" property="og:image" />-->
     <meta content="#df9711" data-react-helmet="true" name="theme-color" />
@@ -120,11 +120,17 @@
             <project-title title="Archivist" status="[&#34;active&#34;,&#34;finished&#34;]" repo="https://github.com/dpeter99/archivist"></project-title>
         </div>
         <div>
-            <p>Archivist is a static site generator that generated this very page you are reading and everything on this site.</p>
+            <p><strong>Technologies used</strong></p>
+<ul>
+<li>Deno</li>
+<li>Typescript</li>
+<li>markdown-it</li>
+</ul>
+<p>Archivist is a static site generator that generated this very page you are reading and everything on this site.</p>
 <p>Archivist is currently in alpha but, I consider most of the API stable. This doesn't mean it can't change, so any feedback is appreciated.</p>
 <h2 class="heading" id="why%3F" tabindex="-1"><a href="#why%3F"></a>Why?</h2>
 <p>The need for Archivist first came to me when trying out <a href="https://github.com/tabatkins/bikeshed">Bikeshed</a>.
-I needed something to generate single-page sites for me, but I found that Bikeshed was lacking.
+I needed something to generate single-page sites for me, but I found that Bikeshed was lacking[^bikeshed].
 So came Archivist, my static site generator that would allow as much customization as one could want.</p>
 <h2 class="heading" id="how-it-works" tabindex="-1"><a href="#how-it-works"></a>How it works</h2>
 <p>Archivist is a pipeline base system where the pipelines run a set of user-defined modules. Each module transforms the files as it wants. (Render markdown, remove a section, etc.)
