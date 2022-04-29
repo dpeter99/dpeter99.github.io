@@ -11,7 +11,7 @@
         <webMaster>webmaster@example.com</webMaster>
         
             <item>
-                <title>Game engine logic systems : post</title>
+                <title>Game engine logic systems</title>
                 <link>https://dpeter99.github.io/posts/2022-03-04-game-io-logic</link>
                 <description>Small exploration of game event systems for a University project</description>
                 <pubDate>Fri Mar 04 2022 17:55:48 GMT+0000 (Coordinated Universal Time)</pubDate>
@@ -19,7 +19,7 @@
             </item>
         
             <item>
-                <title>Forge 1.18 update : post</title>
+                <title>Forge 1.18 update</title>
                 <link>https://dpeter99.github.io/posts/forge_118</link>
                 <description></description>
                 <pubDate>2021-11-12T01:00:43.391Z</pubDate>
@@ -27,7 +27,7 @@
             </item>
         
             <item>
-                <title>Archivist : project</title>
+                <title>Archivist</title>
                 <link>https://dpeter99.github.io/projects/archivist</link>
                 <description>Archivist is an un-opinionated static site generator. I use it to generate my personal blog.</description>
                 <pubDate>Fri Oct 08 2021 17:52:23 GMT+0000 (Coordinated Universal Time)</pubDate>
@@ -35,7 +35,7 @@
             </item>
         
             <item>
-                <title>Forge 1.17 update : post</title>
+                <title>Forge 1.17 update</title>
                 <link>https://dpeter99.github.io/posts/forge_117</link>
                 <description></description>
                 <pubDate>2021-07-15T14:35:43.391Z</pubDate>
@@ -43,7 +43,7 @@
             </item>
         
             <item>
-                <title>Broken SSD : post</title>
+                <title>Broken SSD</title>
                 <link>https://dpeter99.github.io/posts/broken_ssd</link>
                 <description></description>
                 <pubDate>Thu Jul 08 2021 09:00:59 GMT+0000 (Coordinated Universal Time)</pubDate>
@@ -51,7 +51,7 @@
             </item>
         
             <item>
-                <title>Arcane Rituals : project</title>
+                <title>Arcane Rituals</title>
                 <link>https://dpeter99.github.io/projects/arcane_rituals</link>
                 <description>Arcane Rituals is a in development Minecraft mod that is based on magic and inspired by D&amp;D</description>
                 <pubDate>Wed Jul 07 2021 20:16:46 GMT+0000 (Coordinated Universal Time)</pubDate>
@@ -59,7 +59,7 @@
             </item>
         
             <item>
-                <title>Scraperlib : project</title>
+                <title>Scraperlib</title>
                 <link>https://dpeter99.github.io/projects/scraperlib</link>
                 <description>Small recipe scraping library written in kotlin.</description>
                 <pubDate>Wed Jul 07 2021 20:11:32 GMT+0000 (Coordinated Universal Time)</pubDate>
@@ -67,7 +67,7 @@
             </item>
         
             <item>
-                <title>SharpPok : project</title>
+                <title>SharpPok</title>
                 <link>https://dpeter99.github.io/projects/sharp_pok</link>
                 <description>Package manager server for the Pok protocol written in C#</description>
                 <pubDate>Wed Jul 07 2021 20:07:55 GMT+0000 (Coordinated Universal Time)</pubDate>
@@ -75,7 +75,7 @@
             </item>
         
             <item>
-                <title>ACFT : project</title>
+                <title>ACFT</title>
                 <link>https://dpeter99.github.io/projects/ACTF</link>
                 <description>Almost Comprehensive Forge Tutorial. was abandoned in favor of the Community Wiki</description>
                 <pubDate>Wed Jul 07 2021 19:55:51 GMT+0000 (Coordinated Universal Time)</pubDate>
@@ -83,7 +83,7 @@
             </item>
         
             <item>
-                <title>Necs : project</title>
+                <title>Necs</title>
                 <link>https://dpeter99.github.io/projects/NECS</link>
                 <description>Not an Entity Component System. A small project for learning about Unity&#39;s Burst compiler and editor scripting</description>
                 <pubDate>Wed Jul 07 2021 19:04:16 GMT+0000 (Coordinated Universal Time)</pubDate>
@@ -91,7 +91,7 @@
             </item>
         
             <item>
-                <title>Personal website : project</title>
+                <title>Personal website</title>
                 <link>https://dpeter99.github.io/projects/personal_website</link>
                 <description>The website you are on right now. It lists most of my current and old projects, and in the future some posts as well.</description>
                 <pubDate>Wed Jul 07 2021 11:10:53 GMT+0000 (Coordinated Universal Time)</pubDate>
@@ -99,7 +99,7 @@
             </item>
         
             <item>
-                <title>Shadow Engine : project</title>
+                <title>Shadow Engine</title>
                 <link>https://dpeter99.github.io/projects/shadow_engine</link>
                 <description>My hobby game engine using SDL2 and DX12.</description>
                 <pubDate>Tue Jul 06 2021 16:06:26 GMT+0000 (Coordinated Universal Time)</pubDate>
@@ -107,7 +107,7 @@
             </item>
         
             <item>
-                <title>Cookie Clicker : project</title>
+                <title>Cookie Clicker</title>
                 <link>https://dpeter99.github.io/projects/cookie_clicker_java</link>
                 <description>This is a clone of the popular Cookie Clicker game, made in Java for a Uni Homework assignment</description>
                 <pubDate>Tue Dec 03 2019 21:23:13 GMT+0000 (Coordinated Universal Time)</pubDate>
@@ -115,7 +115,7 @@
             </item>
         
             <item>
-                <title>Tile_map : project</title>
+                <title>Tile_map</title>
                 <link>https://dpeter99.github.io/projects/tile_map</link>
                 <description>TileMap was a custom tile amp implementation in Unity targeted for large generated worlds.</description>
                 <pubDate>Thu Feb 02 2017 21:32:27 GMT+0000 (Coordinated Universal Time)</pubDate>
