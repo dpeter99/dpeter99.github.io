@@ -171,18 +171,18 @@ Because of this I now have looked into hobby OS, website, full-stack, and even d
             </project-card>
             
         
-            <project-card href="https://dpeter99.github.io/projects/shadow_engine">
-                <project-title title="Shadow Engine" status="[&#34;on-hold&#34;]"></project-title>
-
-                <p slot="description"> My hobby game engine using SDL2 and DX12.</p>
-
-            </project-card>
-            
-        
             <project-card href="https://dpeter99.github.io/projects/personal_website">
                 <project-title title="Personal website" status="[&#34;active&#34;]"></project-title>
 
                 <p slot="description"> The website you are on right now. It lists most of my current and old projects, and in the future some posts as well.</p>
+
+            </project-card>
+            
+        
+            <project-card href="https://dpeter99.github.io/projects/shadow_engine">
+                <project-title title="Shadow Engine" status="[&#34;on-hold&#34;]"></project-title>
+
+                <p slot="description"> My hobby game engine using SDL2 and DX12.</p>
 
             </project-card>
             
