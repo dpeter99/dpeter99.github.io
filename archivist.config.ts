@@ -50,10 +50,15 @@ export const config: archivist.Config = {
             new archivist.RssFeedModule({helper:(path, mod)=>{
                 return new archivist.ArticleHelper(path, mod, (doc)=>{
                     //console.log(doc.meta.type);
-                    //return false;
+                    
                     return (doc.meta.type == "post" || doc.meta.type == "project")
                             && !doc.name.match(".hu");
                 })
+            }, siteInfo:{
+                title: "dpeter99's blog",
+                description: "Project list and personal blog of dpeter99",
+                email:"",
+                language:"en-en"
             }}),
             new archivist.OutputModule()
         )
