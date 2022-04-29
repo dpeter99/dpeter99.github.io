@@ -5,5 +5,7 @@
     "[markdown]": {
     },
     "frontMatter.framework.startCommand": "npm run dev",
-    "frontMatter.preview.host": "http://127.0.0.1:8888/posts"
+    "frontMatter.preview.host": "http://127.0.0.1:8888/posts",
+    "deno.enable": true,
+    "deno.importMap": "import-map.dev.json"
 }

@@ -47,6 +47,14 @@ export const config: archivist.Config = {
                     return !doc.name.match(".hu");
                 })
             }}),
+            new archivist.RssFeedModule({helper:(path, mod)=>{
+                return new archivist.ArticleHelper(path, mod, (doc)=>{
+                    //console.log(doc.meta.type);
+                    //return false;
+                    return (doc.meta.type == "post" || doc.meta.type == "project")
+                            && !doc.name.match(".hu");
+                })
+            }}),
             new archivist.OutputModule()
         )
     ]

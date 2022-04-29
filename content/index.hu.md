@@ -1,3 +1,8 @@
+---
+type: index
+lastmod: 2022-04-29T09:10:13.353Z
+---
+
 [//]: # (/* cSpell:disable */)
 
 21 éves mérnök-informatikus egyetemi hallgató vagyok. Fő érdeklődési területem a játék és játék-motor fejlesztés, de az informatika minden területén próbálom bővíteni a tudásomat.

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev":        "deno run --unstable --allow-all --no-check --import-map=import-map.dev.json ./archivist.config.dev.ts --watch",
+    "dev":        "deno run --unstable --allow-all --no-check --import-map=import-map.dev.json ./archivist.config.dev.ts",
+    "dev:watch":        "deno run --unstable --allow-all --no-check --import-map=import-map.dev.json ./archivist.config.dev.ts --watch",
     "build":      "deno run --unstable --allow-all --no-check --import-map=import-map.json ./archivist.config.dev.ts",
     "build:prod": "deno run --unstable --allow-all --no-check --import-map=import-map.json ./archivist.config.prod.ts --env=prod"
   },
