@@ -42,7 +42,8 @@ The [Valve developers wiki](https://developer.valvesoftware.com/wiki/Inputs_and_
 Let's start with what is visible from the system to the user. Anything that can move or has any amount of data or logic is called an entity in Source. These are special as they can have more data on them. One of the most basic examples for an entity is a model, as these need the path of the model to draw, and the textures or shaders to use.
 
 A more interesting example of entities are the non-visible ones, like spawners or particle emitters. These are not visible in the game, only in the editor.
-![The broken screen](source_entities.jpg)
+
+![Source engine entities](./source_entities.jpg)
 
 All of these entities have an Input-Output tab in the editor
 

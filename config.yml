@@ -1,0 +1,30 @@
+theme: ["PaperMod"]
+baseURL: 'https://example.org/'
+languageCode: 'en-us'
+title: |
+  dpeter99's blog
+publishDir: "./.out"
+
+caches:
+  images:
+    dir: :cacheDir/images
+
+params:
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Welcome to my blog
+
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: dpeter99
+    subtitle: "Something about me"
+    imageUrl: "images/Aperture_Science_pride_3.png"
+    imageWidth: 240
+    imageHeight: 240
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
